@@ -1,0 +1,26 @@
+      
+{
+    "configurations": [
+    {
+    "cwd":"${workspaceRoot}",
+    "type":"cortex-debug",
+    "request":"launch",
+    "name":"openocd-launch",
+    "servertype":"openocd",
+    "configFiles":[
+        "interface/cmsis-dap.cfg",
+        "target/stm32g4x.cfg"
+    ],
+    "interface":"swd",
+    "executable":".\\build\\Debug\\ESC_G4.elf",
+    "runToEntryPoint": "main",
+    "svdFile": ".\\STM32G431.svd",
+    "liveWatch": {
+        "enabled": true,
+        "samplesPerSecond": 4
+    }
+        }
+
+
+    ]
+}
