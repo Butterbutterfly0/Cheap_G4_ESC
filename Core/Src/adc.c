@@ -37,6 +37,7 @@ void MX_ADC1_Init(void)
 
   ADC_MultiModeTypeDef multimode = {0};
   ADC_ChannelConfTypeDef sConfig = {0};
+  ADC_InjectionConfTypeDef sConfigInjected = {0};
 
   /* USER CODE BEGIN ADC1_Init 1 */
 
@@ -49,7 +50,7 @@ void MX_ADC1_Init(void)
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
   hadc1.Init.GainCompensation = 0;
-  hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
+  hadc1.Init.ScanConvMode = ADC_SCAN_ENABLE;
   hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
   hadc1.Init.LowPowerAutoWait = DISABLE;
   hadc1.Init.ContinuousConvMode = DISABLE;
@@ -82,6 +83,44 @@ void MX_ADC1_Init(void)
   sConfig.OffsetNumber = ADC_OFFSET_NONE;
   sConfig.Offset = 0;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Injected Channel
+  */
+  sConfigInjected.InjectedChannel = ADC_CHANNEL_11;
+  sConfigInjected.InjectedRank = ADC_INJECTED_RANK_1;
+  sConfigInjected.InjectedSamplingTime = ADC_SAMPLETIME_2CYCLES_5;
+  sConfigInjected.InjectedSingleDiff = ADC_SINGLE_ENDED;
+  sConfigInjected.InjectedOffsetNumber = ADC_OFFSET_NONE;
+  sConfigInjected.InjectedOffset = 0;
+  sConfigInjected.InjectedNbrOfConversion = 3;
+  sConfigInjected.InjectedDiscontinuousConvMode = DISABLE;
+  sConfigInjected.AutoInjectedConv = DISABLE;
+  sConfigInjected.QueueInjectedContext = DISABLE;
+  sConfigInjected.ExternalTrigInjecConv = ADC_EXTERNALTRIGINJEC_T1_TRGO;
+  sConfigInjected.ExternalTrigInjecConvEdge = ADC_EXTERNALTRIGINJECCONV_EDGE_RISING;
+  sConfigInjected.InjecOversamplingMode = DISABLE;
+  if (HAL_ADCEx_InjectedConfigChannel(&hadc1, &sConfigInjected) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Injected Channel
+  */
+  sConfigInjected.InjectedChannel = ADC_CHANNEL_14;
+  sConfigInjected.InjectedRank = ADC_INJECTED_RANK_2;
+  if (HAL_ADCEx_InjectedConfigChannel(&hadc1, &sConfigInjected) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Injected Channel
+  */
+  sConfigInjected.InjectedChannel = ADC_CHANNEL_15;
+  sConfigInjected.InjectedRank = ADC_INJECTED_RANK_3;
+  if (HAL_ADCEx_InjectedConfigChannel(&hadc1, &sConfigInjected) != HAL_OK)
   {
     Error_Handler();
   }
@@ -191,6 +230,9 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* adcHandle)
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
+    /* ADC1 interrupt Init */
+    HAL_NVIC_SetPriority(ADC1_2_IRQn, 5, 0);
+    HAL_NVIC_EnableIRQ(ADC1_2_IRQn);
   /* USER CODE BEGIN ADC1_MspInit 1 */
 
   /* USER CODE END ADC1_MspInit 1 */
@@ -225,6 +267,9 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* adcHandle)
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     HAL_GPIO_Init(Busbar_MEAS_GPIO_Port, &GPIO_InitStruct);
 
+    /* ADC2 interrupt Init */
+    HAL_NVIC_SetPriority(ADC1_2_IRQn, 5, 0);
+    HAL_NVIC_EnableIRQ(ADC1_2_IRQn);
   /* USER CODE BEGIN ADC2_MspInit 1 */
 
   /* USER CODE END ADC2_MspInit 1 */
@@ -255,6 +300,15 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* adcHandle)
 
     HAL_GPIO_DeInit(GPIOB, W_MEAS_Pin|V_MEAS_Pin|U_MEAS_Pin);
 
+    /* ADC1 interrupt Deinit */
+  /* USER CODE BEGIN ADC1:ADC1_2_IRQn disable */
+    /**
+    * Uncomment the line below to disable the "ADC1_2_IRQn" interrupt
+    * Be aware, disabling shared interrupt may affect other IPs
+    */
+    /* HAL_NVIC_DisableIRQ(ADC1_2_IRQn); */
+  /* USER CODE END ADC1:ADC1_2_IRQn disable */
+
   /* USER CODE BEGIN ADC1_MspDeInit 1 */
 
   /* USER CODE END ADC1_MspDeInit 1 */
@@ -274,6 +328,15 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* adcHandle)
     PA0     ------> ADC2_IN1
     */
     HAL_GPIO_DeInit(Busbar_MEAS_GPIO_Port, Busbar_MEAS_Pin);
+
+    /* ADC2 interrupt Deinit */
+  /* USER CODE BEGIN ADC2:ADC1_2_IRQn disable */
+    /**
+    * Uncomment the line below to disable the "ADC1_2_IRQn" interrupt
+    * Be aware, disabling shared interrupt may affect other IPs
+    */
+    /* HAL_NVIC_DisableIRQ(ADC1_2_IRQn); */
+  /* USER CODE END ADC2:ADC1_2_IRQn disable */
 
   /* USER CODE BEGIN ADC2_MspDeInit 1 */
 

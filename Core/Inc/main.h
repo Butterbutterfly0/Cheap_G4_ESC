@@ -65,8 +65,6 @@ void Error_Handler(void);
 #define SW_BT_GPIO_Port GPIOA
 #define RGB_LED_Pin GPIO_PIN_3
 #define RGB_LED_GPIO_Port GPIOA
-#define BTN_SET_Pin GPIO_PIN_4
-#define BTN_SET_GPIO_Port GPIOA
 #define SPI_SCK_Pin GPIO_PIN_5
 #define SPI_SCK_GPIO_Port GPIOA
 #define SPI_MISO_Pin GPIO_PIN_6

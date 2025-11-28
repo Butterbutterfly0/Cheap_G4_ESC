@@ -47,14 +47,14 @@ cmake_ninja_workdir = C$:/Project/ESC_G4/build/Debug/
 #############################################
 # Order-only phony target for ESC_G4
 
-build cmake_object_order_depends_target_ESC_G4: phony || cmake_object_order_depends_target_STM32_Drivers
+build cmake_object_order_depends_target_ESC_G4: phony || cmake_object_order_depends_target_FreeRTOS cmake_object_order_depends_target_STM32_Drivers
 
 build CMakeFiles/ESC_G4.dir/Core/Src/main.c.obj: C_COMPILER__ESC_G4_unscanned_Debug C$:/Project/ESC_G4/Core/Src/main.c || cmake_object_order_depends_target_ESC_G4
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\ESC_G4.dir\Core\Src\main.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\ESC_G4.dir
   OBJECT_FILE_DIR = CMakeFiles\ESC_G4.dir\Core\Src
 
@@ -63,7 +63,70 @@ build CMakeFiles/ESC_G4.dir/Core/Src/gpio.c.obj: C_COMPILER__ESC_G4_unscanned_De
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\ESC_G4.dir\Core\Src\gpio.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\ESC_G4.dir
+  OBJECT_FILE_DIR = CMakeFiles\ESC_G4.dir\Core\Src
+
+build CMakeFiles/ESC_G4.dir/Core/Src/app_freertos.c.obj: C_COMPILER__ESC_G4_unscanned_Debug C$:/Project/ESC_G4/Core/Src/app_freertos.c || cmake_object_order_depends_target_ESC_G4
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\ESC_G4.dir\Core\Src\app_freertos.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\ESC_G4.dir
+  OBJECT_FILE_DIR = CMakeFiles\ESC_G4.dir\Core\Src
+
+build CMakeFiles/ESC_G4.dir/Core/Src/adc.c.obj: C_COMPILER__ESC_G4_unscanned_Debug C$:/Project/ESC_G4/Core/Src/adc.c || cmake_object_order_depends_target_ESC_G4
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\ESC_G4.dir\Core\Src\adc.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\ESC_G4.dir
+  OBJECT_FILE_DIR = CMakeFiles\ESC_G4.dir\Core\Src
+
+build CMakeFiles/ESC_G4.dir/Core/Src/dma.c.obj: C_COMPILER__ESC_G4_unscanned_Debug C$:/Project/ESC_G4/Core/Src/dma.c || cmake_object_order_depends_target_ESC_G4
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\ESC_G4.dir\Core\Src\dma.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\ESC_G4.dir
+  OBJECT_FILE_DIR = CMakeFiles\ESC_G4.dir\Core\Src
+
+build CMakeFiles/ESC_G4.dir/Core/Src/fdcan.c.obj: C_COMPILER__ESC_G4_unscanned_Debug C$:/Project/ESC_G4/Core/Src/fdcan.c || cmake_object_order_depends_target_ESC_G4
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\ESC_G4.dir\Core\Src\fdcan.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\ESC_G4.dir
+  OBJECT_FILE_DIR = CMakeFiles\ESC_G4.dir\Core\Src
+
+build CMakeFiles/ESC_G4.dir/Core/Src/spi.c.obj: C_COMPILER__ESC_G4_unscanned_Debug C$:/Project/ESC_G4/Core/Src/spi.c || cmake_object_order_depends_target_ESC_G4
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\ESC_G4.dir\Core\Src\spi.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\ESC_G4.dir
+  OBJECT_FILE_DIR = CMakeFiles\ESC_G4.dir\Core\Src
+
+build CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj: C_COMPILER__ESC_G4_unscanned_Debug C$:/Project/ESC_G4/Core/Src/tim.c || cmake_object_order_depends_target_ESC_G4
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\ESC_G4.dir\Core\Src\tim.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\ESC_G4.dir
+  OBJECT_FILE_DIR = CMakeFiles\ESC_G4.dir\Core\Src
+
+build CMakeFiles/ESC_G4.dir/Core/Src/usart.c.obj: C_COMPILER__ESC_G4_unscanned_Debug C$:/Project/ESC_G4/Core/Src/usart.c || cmake_object_order_depends_target_ESC_G4
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\ESC_G4.dir\Core\Src\usart.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\ESC_G4.dir
   OBJECT_FILE_DIR = CMakeFiles\ESC_G4.dir\Core\Src
 
@@ -72,7 +135,7 @@ build CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj: C_COMPILER__ESC_G4_unsc
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\ESC_G4.dir\Core\Src\stm32g4xx_it.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\ESC_G4.dir
   OBJECT_FILE_DIR = CMakeFiles\ESC_G4.dir\Core\Src
 
@@ -81,7 +144,7 @@ build CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_hal_msp.c.obj: C_COMPILER__ESC_G4
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\ESC_G4.dir\Core\Src\stm32g4xx_hal_msp.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\ESC_G4.dir
   OBJECT_FILE_DIR = CMakeFiles\ESC_G4.dir\Core\Src
 
@@ -90,7 +153,7 @@ build CMakeFiles/ESC_G4.dir/Core/Src/sysmem.c.obj: C_COMPILER__ESC_G4_unscanned_
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\ESC_G4.dir\Core\Src\sysmem.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\ESC_G4.dir
   OBJECT_FILE_DIR = CMakeFiles\ESC_G4.dir\Core\Src
 
@@ -99,7 +162,7 @@ build CMakeFiles/ESC_G4.dir/Core/Src/syscalls.c.obj: C_COMPILER__ESC_G4_unscanne
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\ESC_G4.dir\Core\Src\syscalls.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\ESC_G4.dir
   OBJECT_FILE_DIR = CMakeFiles\ESC_G4.dir\Core\Src
 
@@ -108,7 +171,7 @@ build CMakeFiles/ESC_G4.dir/startup_stm32g431xx.s.obj: ASM_COMPILER__ESC_G4_unsc
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\ESC_G4.dir\startup_stm32g431xx.s.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -x assembler-with-cpp -MMD -MP -g
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\ESC_G4.dir
   OBJECT_FILE_DIR = CMakeFiles\ESC_G4.dir
 
@@ -120,7 +183,7 @@ build CMakeFiles/ESC_G4.dir/startup_stm32g431xx.s.obj: ASM_COMPILER__ESC_G4_unsc
 #############################################
 # Link the executable ESC_G4.elf
 
-build ESC_G4.elf: C_EXECUTABLE_LINKER__ESC_G4_Debug cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj CMakeFiles/ESC_G4.dir/Core/Src/main.c.obj CMakeFiles/ESC_G4.dir/Core/Src/gpio.c.obj CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_hal_msp.c.obj CMakeFiles/ESC_G4.dir/Core/Src/sysmem.c.obj CMakeFiles/ESC_G4.dir/Core/Src/syscalls.c.obj CMakeFiles/ESC_G4.dir/startup_stm32g431xx.s.obj || cmake/stm32cubemx/STM32_Drivers
+build ESC_G4.elf: C_EXECUTABLE_LINKER__ESC_G4_Debug cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj CMakeFiles/ESC_G4.dir/Core/Src/main.c.obj CMakeFiles/ESC_G4.dir/Core/Src/gpio.c.obj CMakeFiles/ESC_G4.dir/Core/Src/app_freertos.c.obj CMakeFiles/ESC_G4.dir/Core/Src/adc.c.obj CMakeFiles/ESC_G4.dir/Core/Src/dma.c.obj CMakeFiles/ESC_G4.dir/Core/Src/fdcan.c.obj CMakeFiles/ESC_G4.dir/Core/Src/spi.c.obj CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj CMakeFiles/ESC_G4.dir/Core/Src/usart.c.obj CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_hal_msp.c.obj CMakeFiles/ESC_G4.dir/Core/Src/sysmem.c.obj CMakeFiles/ESC_G4.dir/Core/Src/syscalls.c.obj CMakeFiles/ESC_G4.dir/startup_stm32g431xx.s.obj || cmake/stm32cubemx/FreeRTOS cmake/stm32cubemx/STM32_Drivers
   CONFIG = Debug
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3
   LINK_FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -T "C:/Project/ESC_G4/STM32G431XX_FLASH.ld" --specs=nano.specs -Wl,-Map=ESC_G4.map -Wl,--gc-sections -Wl,--print-memory-usage
@@ -174,16 +237,34 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Core\Src\system_stm32g4xx.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Core\Src
 
-build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/Project/ESC_G4/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c || cmake_object_order_depends_target_STM32_Drivers
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/Project/ESC_G4/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c || cmake_object_order_depends_target_STM32_Drivers
   CONFIG = Debug
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
-  DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c.obj.d
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
+
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/Project/ESC_G4/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c || cmake_object_order_depends_target_STM32_Drivers
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_adc_ex.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
+
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/Project/ESC_G4/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c || cmake_object_order_depends_target_STM32_Drivers
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_ll_adc.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
 
@@ -192,7 +273,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
 
@@ -201,7 +282,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
 
@@ -210,7 +291,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_rcc_ex.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
 
@@ -219,7 +300,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
 
@@ -228,7 +309,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ex.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
 
@@ -237,7 +318,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_flash_ramfunc.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
 
@@ -246,7 +327,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_gpio.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
 
@@ -255,7 +336,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_exti.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
 
@@ -264,7 +345,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
 
@@ -273,7 +354,7 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_dma_ex.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
 
@@ -282,7 +363,16 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
+
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/Project/ESC_G4/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c || cmake_object_order_depends_target_STM32_Drivers
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_pwr_ex.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
 
@@ -291,7 +381,70 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
   DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
   DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_cortex.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
-  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
+
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/Project/ESC_G4/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c || cmake_object_order_depends_target_STM32_Drivers
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_fdcan.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
+
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/Project/ESC_G4/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c || cmake_object_order_depends_target_STM32_Drivers
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
+
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/Project/ESC_G4/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c || cmake_object_order_depends_target_STM32_Drivers
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_spi_ex.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
+
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/Project/ESC_G4/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c || cmake_object_order_depends_target_STM32_Drivers
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
+
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/Project/ESC_G4/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c || cmake_object_order_depends_target_STM32_Drivers
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_tim_ex.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
+
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/Project/ESC_G4/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c || cmake_object_order_depends_target_STM32_Drivers
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
+
+build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj: C_COMPILER__STM32_Drivers_unscanned_Debug C$:/Project/ESC_G4/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c || cmake_object_order_depends_target_STM32_Drivers
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src\stm32g4xx_hal_uart_ex.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir
   OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\STM32_Drivers.dir\__\__\Drivers\STM32G4xx_HAL_Driver\Src
 
@@ -300,7 +453,113 @@ build cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL
 #############################################
 # Object library STM32_Drivers
 
-build cmake/stm32cubemx/STM32_Drivers: phony cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+build cmake/stm32cubemx/STM32_Drivers: phony cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
+
+# =============================================================================
+# Object build statements for OBJECT_LIBRARY target FreeRTOS
+
+
+#############################################
+# Order-only phony target for FreeRTOS
+
+build cmake_object_order_depends_target_FreeRTOS: phony || .
+
+build cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj: C_COMPILER__FreeRTOS_unscanned_Debug C$:/Project/ESC_G4/Middlewares/Third_Party/FreeRTOS/Source/croutine.c || cmake_object_order_depends_target_FreeRTOS
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source\croutine.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source
+
+build cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj: C_COMPILER__FreeRTOS_unscanned_Debug C$:/Project/ESC_G4/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c || cmake_object_order_depends_target_FreeRTOS
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source
+
+build cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj: C_COMPILER__FreeRTOS_unscanned_Debug C$:/Project/ESC_G4/Middlewares/Third_Party/FreeRTOS/Source/list.c || cmake_object_order_depends_target_FreeRTOS
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source\list.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source
+
+build cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj: C_COMPILER__FreeRTOS_unscanned_Debug C$:/Project/ESC_G4/Middlewares/Third_Party/FreeRTOS/Source/queue.c || cmake_object_order_depends_target_FreeRTOS
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source\queue.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source
+
+build cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj: C_COMPILER__FreeRTOS_unscanned_Debug C$:/Project/ESC_G4/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c || cmake_object_order_depends_target_FreeRTOS
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source
+
+build cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj: C_COMPILER__FreeRTOS_unscanned_Debug C$:/Project/ESC_G4/Middlewares/Third_Party/FreeRTOS/Source/tasks.c || cmake_object_order_depends_target_FreeRTOS
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source\tasks.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source
+
+build cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj: C_COMPILER__FreeRTOS_unscanned_Debug C$:/Project/ESC_G4/Middlewares/Third_Party/FreeRTOS/Source/timers.c || cmake_object_order_depends_target_FreeRTOS
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source\timers.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source
+
+build cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj: C_COMPILER__FreeRTOS_unscanned_Debug C$:/Project/ESC_G4/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c || cmake_object_order_depends_target_FreeRTOS
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2
+
+build cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj: C_COMPILER__FreeRTOS_unscanned_Debug C$:/Project/ESC_G4/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c || cmake_object_order_depends_target_FreeRTOS
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang
+
+build cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj: C_COMPILER__FreeRTOS_unscanned_Debug C$:/Project/ESC_G4/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c || cmake_object_order_depends_target_FreeRTOS
+  CONFIG = Debug
+  DEFINES = -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER
+  DEP_FILE = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F\port.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
+  INCLUDES = -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir
+  OBJECT_FILE_DIR = cmake\stm32cubemx\CMakeFiles\FreeRTOS.dir\__\__\Middlewares\Third_Party\FreeRTOS\Source\portable\GCC\ARM_CM4F
+
+
+
+#############################################
+# Object library FreeRTOS
+
+build cmake/stm32cubemx/FreeRTOS: phony cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
 
 
 #############################################
@@ -331,6 +590,8 @@ build cmake/stm32cubemx/rebuild_cache: phony cmake/stm32cubemx/CMakeFiles/rebuil
 
 build ESC_G4: phony ESC_G4.elf
 
+build FreeRTOS: phony cmake/stm32cubemx/FreeRTOS
+
 build STM32_Drivers: phony cmake/stm32cubemx/STM32_Drivers
 
 # =============================================================================
@@ -348,7 +609,7 @@ build all: phony ESC_G4.elf cmake/stm32cubemx/all
 #############################################
 # Folder: C:/Project/ESC_G4/build/Debug/cmake/stm32cubemx
 
-build cmake/stm32cubemx/all: phony cmake/stm32cubemx/STM32_Drivers
+build cmake/stm32cubemx/all: phony cmake/stm32cubemx/STM32_Drivers cmake/stm32cubemx/FreeRTOS
 
 # =============================================================================
 # Built-in targets
