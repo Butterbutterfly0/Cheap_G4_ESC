@@ -45,11 +45,21 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
+    Library/Src/FOC.c
+    Library/Src/FOC_Portable.c
+    Library/Src/OS_Support.c
+
+    OS_App/LIVE_task.c
+    OS_App/BTN_Set_task.c
+    OS_App/FOC_task.c
+    OS_App/BusBar_task.c
+    OS_App/ISR_Proc.c
 )
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
+    Library/Inc
 )
 
 # Add project symbols (macros)

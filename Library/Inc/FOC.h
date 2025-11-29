@@ -2,6 +2,7 @@
 #define FOC_H
 
 #include <stdint.h>
+#include <math.h>
 
 #define SECTOR_ONE 3
 #define SECTOR_TWO 1
@@ -18,5 +19,6 @@ extern void Anti_Park_Transform(float Ud,float Uq, float theta, float *Ualpha,fl
 
 extern void Anti_Clark_Transform(float Ualpha, float Ubeta, float *Ua, float *Ub, float *Uc);
 
-
+extern void SVPWM( float Ualpha, float Ubeta, float VBarbus, 
+            float* PWMa_duty, float* PWMb_duty, float* PWMc_duty);
 #endif

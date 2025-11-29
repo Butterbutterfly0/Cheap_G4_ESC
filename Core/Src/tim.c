@@ -29,7 +29,8 @@ TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim6;
 TIM_HandleTypeDef htim8;
-TIM_HandleTypeDef htim17;
+TIM_HandleTypeDef htim15;
+TIM_HandleTypeDef htim16;
 DMA_HandleTypeDef hdma_tim2_ch4;
 
 /* TIM1 init function */
@@ -313,45 +314,72 @@ void MX_TIM8_Init(void)
   /* USER CODE END TIM8_Init 2 */
 
 }
-/* TIM17 init function */
-void MX_TIM17_Init(void)
+/* TIM15 init function */
+void MX_TIM15_Init(void)
 {
 
-  /* USER CODE BEGIN TIM17_Init 0 */
+  /* USER CODE BEGIN TIM15_Init 0 */
 
-  /* USER CODE END TIM17_Init 0 */
+  /* USER CODE END TIM15_Init 0 */
 
-  TIM_IC_InitTypeDef sConfigIC = {0};
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
 
-  /* USER CODE BEGIN TIM17_Init 1 */
+  /* USER CODE BEGIN TIM15_Init 1 */
 
-  /* USER CODE END TIM17_Init 1 */
-  htim17.Instance = TIM17;
-  htim17.Init.Prescaler = 0;
-  htim17.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim17.Init.Period = 65535;
-  htim17.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim17.Init.RepetitionCounter = 0;
-  htim17.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  if (HAL_TIM_Base_Init(&htim17) != HAL_OK)
+  /* USER CODE END TIM15_Init 1 */
+  htim15.Instance = TIM15;
+  htim15.Init.Prescaler = 159;
+  htim15.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim15.Init.Period = 999;
+  htim15.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim15.Init.RepetitionCounter = 0;
+  htim15.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim15) != HAL_OK)
   {
     Error_Handler();
   }
-  if (HAL_TIM_IC_Init(&htim17) != HAL_OK)
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim15, &sClockSourceConfig) != HAL_OK)
   {
     Error_Handler();
   }
-  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;
-  sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
-  sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
-  sConfigIC.ICFilter = 0;
-  if (HAL_TIM_IC_ConfigChannel(&htim17, &sConfigIC, TIM_CHANNEL_1) != HAL_OK)
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim15, &sMasterConfig) != HAL_OK)
   {
     Error_Handler();
   }
-  /* USER CODE BEGIN TIM17_Init 2 */
+  /* USER CODE BEGIN TIM15_Init 2 */
 
-  /* USER CODE END TIM17_Init 2 */
+  /* USER CODE END TIM15_Init 2 */
+
+}
+/* TIM16 init function */
+void MX_TIM16_Init(void)
+{
+
+  /* USER CODE BEGIN TIM16_Init 0 */
+
+  /* USER CODE END TIM16_Init 0 */
+
+  /* USER CODE BEGIN TIM16_Init 1 */
+
+  /* USER CODE END TIM16_Init 1 */
+  htim16.Instance = TIM16;
+  htim16.Init.Prescaler = 0;
+  htim16.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim16.Init.Period = 999;
+  htim16.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim16.Init.RepetitionCounter = 0;
+  htim16.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim16) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM16_Init 2 */
+
+  /* USER CODE END TIM16_Init 2 */
 
 }
 
@@ -452,28 +480,27 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* tim_baseHandle)
 
   /* USER CODE END TIM8_MspInit 1 */
   }
-  else if(tim_baseHandle->Instance==TIM17)
+  else if(tim_baseHandle->Instance==TIM15)
   {
-  /* USER CODE BEGIN TIM17_MspInit 0 */
+  /* USER CODE BEGIN TIM15_MspInit 0 */
 
-  /* USER CODE END TIM17_MspInit 0 */
-    /* TIM17 clock enable */
-    __HAL_RCC_TIM17_CLK_ENABLE();
+  /* USER CODE END TIM15_MspInit 0 */
+    /* TIM15 clock enable */
+    __HAL_RCC_TIM15_CLK_ENABLE();
+  /* USER CODE BEGIN TIM15_MspInit 1 */
 
-    __HAL_RCC_GPIOB_CLK_ENABLE();
-    /**TIM17 GPIO Configuration
-    PB5     ------> TIM17_CH1
-    */
-    GPIO_InitStruct.Pin = INPUT_PWM_Pin;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-    GPIO_InitStruct.Alternate = GPIO_AF10_TIM17;
-    HAL_GPIO_Init(INPUT_PWM_GPIO_Port, &GPIO_InitStruct);
+  /* USER CODE END TIM15_MspInit 1 */
+  }
+  else if(tim_baseHandle->Instance==TIM16)
+  {
+  /* USER CODE BEGIN TIM16_MspInit 0 */
 
-  /* USER CODE BEGIN TIM17_MspInit 1 */
+  /* USER CODE END TIM16_MspInit 0 */
+    /* TIM16 clock enable */
+    __HAL_RCC_TIM16_CLK_ENABLE();
+  /* USER CODE BEGIN TIM16_MspInit 1 */
 
-  /* USER CODE END TIM17_MspInit 1 */
+  /* USER CODE END TIM16_MspInit 1 */
   }
 }
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef* timHandle)
@@ -638,22 +665,27 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* tim_baseHandle)
 
   /* USER CODE END TIM8_MspDeInit 1 */
   }
-  else if(tim_baseHandle->Instance==TIM17)
+  else if(tim_baseHandle->Instance==TIM15)
   {
-  /* USER CODE BEGIN TIM17_MspDeInit 0 */
+  /* USER CODE BEGIN TIM15_MspDeInit 0 */
 
-  /* USER CODE END TIM17_MspDeInit 0 */
+  /* USER CODE END TIM15_MspDeInit 0 */
     /* Peripheral clock disable */
-    __HAL_RCC_TIM17_CLK_DISABLE();
+    __HAL_RCC_TIM15_CLK_DISABLE();
+  /* USER CODE BEGIN TIM15_MspDeInit 1 */
 
-    /**TIM17 GPIO Configuration
-    PB5     ------> TIM17_CH1
-    */
-    HAL_GPIO_DeInit(INPUT_PWM_GPIO_Port, INPUT_PWM_Pin);
+  /* USER CODE END TIM15_MspDeInit 1 */
+  }
+  else if(tim_baseHandle->Instance==TIM16)
+  {
+  /* USER CODE BEGIN TIM16_MspDeInit 0 */
 
-  /* USER CODE BEGIN TIM17_MspDeInit 1 */
+  /* USER CODE END TIM16_MspDeInit 0 */
+    /* Peripheral clock disable */
+    __HAL_RCC_TIM16_CLK_DISABLE();
+  /* USER CODE BEGIN TIM16_MspDeInit 1 */
 
-  /* USER CODE END TIM17_MspDeInit 1 */
+  /* USER CODE END TIM16_MspDeInit 1 */
   }
 }
 

@@ -97,8 +97,6 @@ void SVPWM( float Ualpha, float Ubeta, float VBarbus,
       T1 = Vy;T2 = -Vx;break;
   }
 
-  
-
   if(T1+T2>1.0f)
   {
     T0=0.0f;

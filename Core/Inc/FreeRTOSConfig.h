@@ -69,7 +69,7 @@
 #define configTICK_RATE_HZ                       ((TickType_t)1000)
 #define configMAX_PRIORITIES                     ( 56 )
 #define configMINIMAL_STACK_SIZE                 ((uint16_t)128)
-#define configTOTAL_HEAP_SIZE                    ((size_t)3072)
+#define configTOTAL_HEAP_SIZE                    ((size_t)9216)
 #define configMAX_TASK_NAME_LEN                  ( 16 )
 #define configUSE_TRACE_FACILITY                 1
 #define configUSE_16_BIT_TICKS                   0
@@ -107,13 +107,16 @@ to exclude the API function. */
 #define INCLUDE_vTaskPrioritySet             1
 #define INCLUDE_uxTaskPriorityGet            1
 #define INCLUDE_vTaskDelete                  1
-#define INCLUDE_vTaskCleanUpResources        0
+#define INCLUDE_vTaskCleanUpResources        1
 #define INCLUDE_vTaskSuspend                 1
 #define INCLUDE_vTaskDelayUntil              1
 #define INCLUDE_vTaskDelay                   1
 #define INCLUDE_xTaskGetSchedulerState       1
+#define INCLUDE_xEventGroupSetBitFromISR     1
 #define INCLUDE_xTimerPendFunctionCall       1
 #define INCLUDE_xQueueGetMutexHolder         1
+#define INCLUDE_xSemaphoreGetMutexHolder     1
+#define INCLUDE_pcTaskGetTaskName            1
 #define INCLUDE_uxTaskGetStackHighWaterMark  1
 #define INCLUDE_xTaskGetCurrentTaskHandle    1
 #define INCLUDE_eTaskGetState                1

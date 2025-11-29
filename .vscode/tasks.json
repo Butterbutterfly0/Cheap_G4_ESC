@@ -37,11 +37,23 @@
             "command":"openocd",
             "args":[
                 "-f",
-                "cmsis-dap.cfg",
+                "stlink.cfg",
                 "-f",
                 "stm32g4x.cfg",
                 "-c",
                 "program ./build/Debug/ESC_G4.elf verify exit reset"
+            ],
+            "group":"build"
+        },
+        {
+            "label":"elf2hex",
+            "type":"shell",
+            "command":"arm-none-eabi-objcopy",
+            "args":[
+                "-O",
+                "ihex",
+                "./build/Debug/ESC_G4.elf",
+                "./build/Debug/ESC_G4.hex"
             ],
             "group":"build"
         }

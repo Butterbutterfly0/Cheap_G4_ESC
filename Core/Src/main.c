@@ -31,6 +31,8 @@
 /* USER CODE BEGIN Includes */
 #include <math.h>
 #include <string.h>
+#include "FOC.h"
+#include "FOC_Portable.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -66,38 +68,38 @@
 
 /* USER CODE BEGIN PV */
 
-uint8_t tx_buf[TX_NUM]={0};
-uint8_t LED_array[25]={	55,55,55,55,133,133,133,133,
-												133,133,55,55,133,133,133,133,
-												55,55,55,55,133,133,133,133,0};
+// uint8_t tx_buf[TX_NUM]={0};
+// uint8_t LED_array[25]={	55,55,55,55,133,133,133,133,
+// 												133,133,55,55,133,133,133,133,
+// 												55,55,55,55,133,133,133,133,0};
 
-float etheta = 0.0f;
-float etheta_angle = 0.0f;
+// float etheta = 0.0f;
+// float etheta_angle = 0.0f;
 
-float VBarbus = 12.0f;
-float Ud = 0.0f,Uq = 0.0f;
-float Ualpha = 0.0f,Ubeta = 0.0f;
-float PWM_cmp[3] = {0.0f, 0.0f, 0.0f};
+// float VBarbus = 12.0f;
+// float Ud = 0.0f,Uq = 0.0f;
+// float Ualpha = 0.0f,Ubeta = 0.0f;
+// float PWM_cmp[3] = {0.0f, 0.0f, 0.0f};
 
-float glb_Ua = 0.0f,glb_Ub = 0.0f,glb_Uc = 0.0f;
+// float glb_Ua = 0.0f,glb_Ub = 0.0f,glb_Uc = 0.0f;
 
-float glb_section = 0.0f;
+// float glb_section = 0.0f;
 
-float glb_vx = 0.0f, glb_vy = 0.0f, glb_vz = 0.0f;
+// float glb_vx = 0.0f, glb_vy = 0.0f, glb_vz = 0.0f;
 
-float glb_t0 = 0.0f, glb_t1 = 0.0f, glb_t2 = 0.0f;
+// float glb_t0 = 0.0f, glb_t1 = 0.0f, glb_t2 = 0.0f;
 
-float last_sample_current[3]={0.0f,0.0f,0.0f};
-float sample_cureent[3]={0.0f,0.0f,0.0f};
-uint8_t uart2_buf[UART2_TX_NUM]={0.0f};
+// float last_sample_current[3]={0.0f,0.0f,0.0f};
+// float sample_cureent[3]={0.0f,0.0f,0.0f};
+// uint8_t uart2_buf[UART2_TX_NUM]={0.0f};
 
 
-uint8_t start_motor_flag =0; 
+// uint8_t start_motor_flag =0; 
 
-float filtered_current[3] = {0.0f};
+// float filtered_current[3] = {0.0f};
 
-float sliding_window[3][SLIDING_WINDOW_SIZE] = {0.0};
-float sort_temp[SLIDING_WINDOW_SIZE] = {0.0};
+// float sliding_window[3][SLIDING_WINDOW_SIZE] = {0.0};
+// float sort_temp[SLIDING_WINDOW_SIZE] = {0.0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -121,255 +123,33 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   // }
 }
 
-void bubble_sort(float *array, int size)
-{
-  int i, j;
-}
+// void bubble_sort(float *array, int size)
+// {
+//   int i, j;
+// }
 
 
-void Clark_Transform(float Ia, float Ib, float Ic, float *Ialpha, float *Ibeta)// equal A
-{
-  *Ialpha = 0.6667f*Ia - 0.3333f*Ib - 0.3333f*Ic;
-  *Ibeta = 0.5773*Ib - 0.5773f*Ic;
-}
-
-void Park_Transform(float Ualpha, float Ubeta, float theta, float *Ud, float *Uq)
-{
-	float sin_val = sinf(theta);
-  float cos_val = cosf(theta);
-
-  *Ud = Ualpha*cos_val + Ubeta*sin_val;
-  *Uq = -Ualpha*sin_val + Ubeta*cos_val;
-}
-void Anti_Park_Transform(float Ud,float Uq, float theta, float *Ualpha,float *Ubeta)
-{
-	float sin_val = sinf(theta);
-  float cos_val = cosf(theta);
-
-  *Ualpha = Ud*cos_val - Uq*sin_val;
-  *Ubeta = Ud*sin_val + Uq*cos_val;
-}
-
-void Anti_Clark_Transform(float Ualpha, float Ubeta, float *Ua, float *Ub, float *Uc)
-{
-  static const float cos_30 = 0.866;
-  static const float sin_30 = 0.5;
-  *Ua = Ualpha;
-  *Ub = Ualpha*sin_30 + Ubeta*cos_30;
-  *Uc = Ualpha*cos_30 - Ubeta*sin_30;
-}
-#define SECTOR_ONE 3
-#define SECTOR_TWO 1
-#define SECTOR_THREE 5
-#define SECTOR_FOUR 4
-#define SECTOR_FIVE 6
-#define SECTOR_SIX 2
-
-void SVPWM( float Ualpha, float Ubeta, float VBarbus, 
-             
-            float* PWMa_duty, float* PWMb_duty, float* PWMc_duty)
-{
-  const static float sqrt3 = 1.7320508075688772;
-
-  float Ua, Ub, Uc;
-
-  uint8_t which_section = 0;
-
-  #if 0
-  //Anti_Clark_Transform(Ualpha, Ubeta, &Ua, &Ub, &Uc);
-  // if(fabs(Ualpha) > fabs(Ubeta)*sqrt3)
-  // {
-  //   which_section = 1;
-  // }
-  // else if (Ualpha<0.0f)
-  // {
-  //   which_section = 2;
-  // }
-
-  // if(Ubeta<0.0f)
-  // {
-  //   which_section = 5 - which_section;
-  // }
-  #endif
-
-  Ua=Ubeta;
-  Ub=(sqrt3*Ualpha-Ubeta)/2;
-  Uc=(-sqrt3*Ualpha-Ubeta)/2;
-
-  glb_Ua=Ua;
-  glb_Ub=Ub;
-  glb_Uc=Uc;
-
-  uint8_t A=0,B=0,C=0;
-  if(Ua>0.0f)
-  A=1;
-  if(Ub>0.0f)
-  B=1;
-  if(Uc>0.0f)
-  C=1;
-  which_section = A+2*B+4*C;
-
-  switch(which_section)
-  {
-    case SECTOR_ONE:
-    which_section = 1;break;
-    case SECTOR_TWO:
-    which_section = 2;break;
-    case SECTOR_THREE:
-    which_section = 3;break;
-    case SECTOR_FOUR:
-    which_section = 4;break;
-    case SECTOR_FIVE:
-    which_section = 5;break;
-    case SECTOR_SIX:  
-    which_section = 6;break;
-  }
-  glb_section = which_section;
-
-  float Vx=0.0f,Vy=0.0f,Vz=0.0f;
-  
-  Vx = sqrt3*Ubeta/VBarbus;
-
-  Vy = 3*Ualpha+sqrt3*Ubeta;
-  Vy = Vy/VBarbus/2;
-
-  Vz = -3*Ualpha+sqrt3*Ubeta;
-  Vz = Vz/VBarbus/2;
-
-  glb_vx = Vx;
-  glb_vy = Vy;
-  glb_vz = Vz;
-
-  float T0=0.0f,T1= 0.0f,T2 = 0.0f;
-  switch(which_section)
-  {
-      case 1:
-      T1 = -Vz;T2 = Vx;break;
-      case 2:
-      T1 = Vz;T2 = Vy;break;
-      case 3:
-      T1 = Vx;T2 = -Vy;break;
-      case 4:
-      T1 = -Vx;T2 = Vz;break;
-      case 5:
-      T1 = -Vy;T2 = -Vz;break;
-      case 6:
-      T1 = Vy;T2 = -Vx;break;
-  }
-
-  
-
-  // if(T1+T2>1.0f)
-  // {
-  //   T0=0.0f;
-  //   T1=T1/(T1+T2);
-  //   T2=T2/(T1+T2);
-  // }
-  // else
-  {
-    T0=1.0f-T1-T2;
-  }
-
-  glb_t0 = T0;
-  glb_t1 = T1;
-  glb_t2 = T2;
-
-  float Ta=0.0f,Tb=0.0f,Tc=0.0f;
-  Ta = (1-T1-T2)/4;
-  Tb = Ta + T1/2;
-  Tc = Tb + T2/2;
-
-  switch(which_section)
-  {
-    case 1:
-    *PWMa_duty = Ta;
-    *PWMb_duty = Tb;
-    *PWMc_duty = Tc;
-    break;
-    case 2:
-    *PWMa_duty = Tb;
-    *PWMb_duty = Ta;
-    *PWMc_duty = Tc;
-    break;
-    case 3:
-    *PWMa_duty = Tc;
-    *PWMb_duty = Ta;
-    *PWMc_duty = Tb;
-    break;
-    case 4:
-    *PWMa_duty = Tc;
-    *PWMb_duty = Tb;
-    *PWMc_duty = Ta;
-    break;
-    case 5:
-    *PWMa_duty = Tb;
-    *PWMb_duty = Tc;
-    *PWMc_duty = Ta;
-    break;
-    case 6:
-    *PWMa_duty = Ta;
-    *PWMb_duty = Tc;
-    *PWMc_duty = Tb;
-    break;
-  }
 
 
-}
+// void HAL_ADCEx_InjectedConvCpltCallback(ADC_HandleTypeDef *hadc)
+// {
+//   if(hadc->Instance==ADC1)
+//   {
+//     sample_cureent[0] = (float)HAL_ADCEx_InjectedGetValue(hadc,ADC_INJECTED_RANK_1)/4095.0f*3.3f-1.65;
+// 		sample_cureent[1] = (float)HAL_ADCEx_InjectedGetValue(hadc,ADC_INJECTED_RANK_2)/4095.0f*3.3f-1.65;
+//     sample_cureent[2] = (float)HAL_ADCEx_InjectedGetValue(hadc,ADC_INJECTED_RANK_3)/4095.0f*3.3f-1.65;
+//     filtered_current[0] = sample_cureent[0]*0.9f+filtered_current[0]*0.1f;
+//     filtered_current[1] = sample_cureent[1]*0.9f+filtered_current[1]*0.1f;
+//     filtered_current[2] = sample_cureent[2]*0.9f+filtered_current[2]*0.1f;
+//     memcpy(uart2_buf,&glb_section,4);
+//     memcpy(uart2_buf+4,(uint8_t*)&sample_cureent,12);
+//     memcpy(uart2_buf+16,(uint8_t*)&filtered_current,12);
+//     HAL_UART_Transmit_DMA(&huart2,uart2_buf,UART2_TX_NUM);
+
+//   }
+// }
 
 
-void HAL_ADCEx_InjectedConvCpltCallback(ADC_HandleTypeDef *hadc)
-{
-  if(hadc->Instance==ADC1)
-  {
-    sample_cureent[0] = (float)HAL_ADCEx_InjectedGetValue(hadc,ADC_INJECTED_RANK_1)/4095.0f*3.3f-1.65;
-		sample_cureent[1] = (float)HAL_ADCEx_InjectedGetValue(hadc,ADC_INJECTED_RANK_2)/4095.0f*3.3f-1.65;
-    sample_cureent[2] = (float)HAL_ADCEx_InjectedGetValue(hadc,ADC_INJECTED_RANK_3)/4095.0f*3.3f-1.65;
-    filtered_current[0] = sample_cureent[0]*0.9f+filtered_current[0]*0.1f;
-    filtered_current[1] = sample_cureent[1]*0.9f+filtered_current[1]*0.1f;
-    filtered_current[2] = sample_cureent[2]*0.9f+filtered_current[2]*0.1f;
-    memcpy(uart2_buf,&glb_section,4);
-    memcpy(uart2_buf+4,(uint8_t*)&sample_cureent,12);
-    memcpy(uart2_buf+16,(uint8_t*)&filtered_current,12);
-    HAL_UART_Transmit_DMA(&huart2,uart2_buf,UART2_TX_NUM);
-
-  }
-}
-
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-  if(GPIO_Pin==GPIO_PIN_4)
-  {
-    start_motor_flag = ! start_motor_flag;
-
-    if(start_motor_flag)
-    {
-			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13,GPIO_PIN_SET);
-      	HAL_TIM_Base_Start(&htim1);
-
-        HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-        HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
-        HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
-
-        HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
-        HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
-        HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
-    }
-    else
-    {
-			HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13,GPIO_PIN_RESET);
-      	HAL_TIM_Base_Start(&htim1);
-        HAL_TIM_Base_Stop(&htim1);
-
-        HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_1);
-        HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_2);
-        HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_3);
-
-        HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_1);
-        HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_2);
-        HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_3);
-    }
-  }
-}
 /* USER CODE END 0 */
 
 /**
@@ -409,39 +189,32 @@ int main(void)
   MX_TIM1_Init();
   MX_TIM2_Init();
   MX_TIM3_Init();
-  MX_TIM17_Init();
   MX_UART4_Init();
   MX_USART2_UART_Init();
   MX_ADC2_Init();
   MX_TIM6_Init();
   MX_TIM8_Init();
+  MX_TIM15_Init();
+  MX_TIM16_Init();
   /* USER CODE BEGIN 2 */
 	
-//HAL_TIM_Base_Start(&htim1);
-
-//        HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-//        HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
-//        HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
-
-//        HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
-//        HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
-//        HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_3);
 
 //HAL_TIM_Base_Start_IT(&htim6);
 
-HAL_ADCEx_InjectedStart_IT(&hadc1);
+// Phase_Current_Sample_Start();
+// LIVE_Light_Off();
 
-  Uq = 1.0  ; 
-//	
-	tx_buf[TAIL_INDEX] = 0x00;
-	tx_buf[TAIL_INDEX+1] = 0x00;
-	tx_buf[TAIL_INDEX+2] = 0x80;
-	tx_buf[TAIL_INDEX+3] = 0x7f;
+//   Uq = 1.0  ; 
+// //	
+// 	tx_buf[TAIL_INDEX] = 0x00;
+// 	tx_buf[TAIL_INDEX+1] = 0x00;
+// 	tx_buf[TAIL_INDEX+2] = 0x80;
+// 	tx_buf[TAIL_INDEX+3] = 0x7f;
 
-  uart2_buf[UART2_FLOAT_TAIL_INDEX] = 0x00;
-  uart2_buf[UART2_FLOAT_TAIL_INDEX+1] = 0x00;
-  uart2_buf[UART2_FLOAT_TAIL_INDEX+2] = 0x80;
-  uart2_buf[UART2_FLOAT_TAIL_INDEX+3] = 0x7f;
+//   uart2_buf[UART2_FLOAT_TAIL_INDEX] = 0x00;
+//   uart2_buf[UART2_FLOAT_TAIL_INDEX+1] = 0x00;
+//   uart2_buf[UART2_FLOAT_TAIL_INDEX+2] = 0x80;
+//   uart2_buf[UART2_FLOAT_TAIL_INDEX+3] = 0x7f;
 	
 	
   uint8_t none[4]= {1,2,3,4};
@@ -460,21 +233,21 @@ HAL_ADCEx_InjectedStart_IT(&hadc1);
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    float local_etheta ;
-    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_SET);
+    // float local_etheta ;
+    // HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_SET);
     //HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-    __HAL_TIM_DISABLE_IT(&htim6, TIM_IT_UPDATE); 
-    local_etheta = etheta;
-    __HAL_TIM_ENABLE_IT(&htim6, TIM_IT_UPDATE); 
-    Anti_Park_Transform(Ud,Uq,local_etheta,&Ualpha,&Ubeta);
-    SVPWM(Ualpha,Ubeta,VBarbus,PWM_cmp,PWM_cmp+1,PWM_cmp+2);
-    __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_1, PWM_cmp[0]*8000);
-    __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_2, PWM_cmp[1]*8000);
-    __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_3, PWM_cmp[2]*8000);
+    // __HAL_TIM_DISABLE_IT(&htim6, TIM_IT_UPDATE); 
+    // local_etheta = etheta;
+    // __HAL_TIM_ENABLE_IT(&htim6, TIM_IT_UPDATE); 
+    // Anti_Park_Transform(Ud,Uq,local_etheta,&Ualpha,&Ubeta);
+    // SVPWM(Ualpha,Ubeta,VBarbus,PWM_cmp,PWM_cmp+1,PWM_cmp+2);
+    // __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_1, PWM_cmp[0]*8000);
+    // __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_2, PWM_cmp[1]*8000);
+    // __HAL_TIM_SetCompare(&htim1, TIM_CHANNEL_3, PWM_cmp[2]*8000);
     
-    memcpy(tx_buf,(uint8_t*)&etheta_angle,4);
-    memcpy(tx_buf+4,&glb_section,4);
-    memcpy(tx_buf+8,PWM_cmp,12);
+    // memcpy(tx_buf,(uint8_t*)&etheta_angle,4);
+    // memcpy(tx_buf+4,&glb_section,4);
+    // memcpy(tx_buf+8,PWM_cmp,12);
     // memcpy(tx_buf+8,&Ud,4);
     // memcpy(tx_buf+12,&Uq,4);
     // memcpy(tx_buf+16,&Ualpha,4);
@@ -493,17 +266,18 @@ HAL_ADCEx_InjectedStart_IT(&hadc1);
 		//memcpy(tx_buf+4,PWM_cmp,12);
 		//HAL_UART_Transmit_DMA(&huart1,tx_buf,TX_NUM);
 
-     HAL_UART_Transmit(&huart1,none,4,100);
+    //  HAL_UART_Transmit(&huart1,none,4,100);
+    //  HAL_TIM_PWM_Start_DMA(&htim2,TIM_CHANNEL_4,(uint32_t*)LED_array,25);
    // if(htim->Instance==TIM6)
-  {
-    etheta += 0.1000f;
-		if(etheta>6.28f)
-			etheta =0.0f;
-    else if(etheta<-0.0f)
-      etheta = 6.28f;
+  // {
+  //   etheta += 0.1000f;
+	// 	if(etheta>6.28f)
+	// 		etheta =0.0f;
+  //   else if(etheta<-0.0f)
+  //     etheta = 6.28f;
 
-    etheta_angle= etheta / 3.1415926 *180;
-  }
+  //   etheta_angle= etheta / 3.1415926 *180;
+  // }
     HAL_Delay(1);
 		// HAL_TIM_PWM_Start_DMA(&htim2,TIM_CHANNEL_4,(uint32_t*)LED_array,25);
     /* USER CODE END WHILE */

@@ -25,7 +25,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "OS_Support.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,7 +57,45 @@ const osThreadAttr_t defaultTask_attributes = {
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
+__weak void FOC_Task(void *argument)
+{
+  for(;;)
+  {
+    osDelay(1);
+  }
+}
 
+__weak void BusBar_Task(void *argument)
+{
+  for(;;)
+  {
+    osDelay(1);
+  }
+}
+
+__weak void Live_Task(void *argument)
+{
+  for(;;)
+  {
+    osDelay(1);
+  }
+}
+
+__weak void Buzzer_Task(void *argument)
+{
+  for(;;)
+  {
+    osDelay(1);
+  }
+}
+
+__weak void BTN_Set_Task(void *argument)
+{
+  for(;;)
+  {
+    osDelay(1);
+  }
+}
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void *argument);
@@ -71,7 +109,7 @@ void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
   */
 void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
-
+  OS_Init();
   /* USER CODE END Init */
 
   /* USER CODE BEGIN RTOS_MUTEX */
@@ -96,6 +134,13 @@ void MX_FREERTOS_Init(void) {
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
+
+  
+
+  xTaskCreate(Live_Task, "LIVE_Task", 128, NULL, osPriorityNormal, NULL);
+  xTaskCreate(BTN_Set_Task, "BTN_Set_Task", 128, NULL, osPriorityNormal, NULL);
+  xTaskCreate(FOC_Task, "FOC_Task", 128, NULL, osPriorityNormal, NULL);
+  xTaskCreate(BusBar_Task, "BusBar_Task", 128, NULL, osPriorityNormal, NULL);
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
