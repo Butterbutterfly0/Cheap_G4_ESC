@@ -139,7 +139,7 @@ void MX_FREERTOS_Init(void) {
 
   xTaskCreate(Live_Task, "LIVE_Task", 128, NULL, osPriorityNormal, NULL);
   xTaskCreate(BTN_Set_Task, "BTN_Set_Task", 128, NULL, osPriorityNormal, NULL);
-  xTaskCreate(FOC_Task, "FOC_Task", 128, NULL, osPriorityNormal, NULL);
+  xTaskCreate(FOC_Task, "FOC_Task", 128, NULL, osPriorityHigh1, NULL);
   xTaskCreate(BusBar_Task, "BusBar_Task", 128, NULL, osPriorityNormal, NULL);
   /* USER CODE END RTOS_THREADS */
 

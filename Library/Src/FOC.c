@@ -1,5 +1,8 @@
 #include "FOC.h"
-
+#include "FOC_Portable.h"
+#include <string.h>
+#include <stdlib.h>
+#include "Common.h"
 void Clark_Transform(float Ia, float Ib, float Ic, float *Ialpha, float *Ibeta)// equal A
 {
   *Ialpha = 0.6667f*Ia - 0.3333f*Ib - 0.3333f*Ic;
@@ -148,4 +151,52 @@ void SVPWM( float Ualpha, float Ubeta, float VBarbus,
   }
 
 
+}
+
+void sample_struct_init(sample_struct_t *sample)
+{
+    for(int i=0;i<3;i++)
+    {
+        sample->sample_current[i] = 0;
+        for(int j=0;j<SLIDING_WINDOW_SIZE;j++)
+        {
+            sample->sample_current_slide_window[i][j] = 0;
+            
+        }
+    }
+}
+
+  uint16_t sort_temp[SLIDING_WINDOW_SIZE];
+void sample_struct_update(sample_struct_t *sample)
+{
+  Get_Current_Sample(sample->sample_current);
+
+  for(int i=0;i<3;i++)
+  {
+    for(int j=0;j<SLIDING_WINDOW_SIZE-1;j++)
+    {
+        sample->sample_current_slide_window[i][j] = sample->sample_current_slide_window[i][j+1];
+    }
+    sample->sample_current_slide_window[i][SLIDING_WINDOW_SIZE-1] = sample->sample_current[i];
+  }
+  int32_t temp;
+
+  for(int i=0;i<3;i++)
+  {
+    //  temp = sample->sample_current_slide_window[i][SLIDING_WINDOW_SIZE-1]-sample->sample_current_slide_window[i][SLIDING_WINDOW_SIZE-2];
+    //  temp = abs(temp);
+    //  if(temp>900)
+    //  {
+    //     sample->sample_current_slide_window[i][SLIDING_WINDOW_SIZE-1] = sample->sample_current_slide_window[i][SLIDING_WINDOW_SIZE-2];
+    //  }
+     sample->filtered_current[i] = sample->sample_current_slide_window[i][SLIDING_WINDOW_SIZE-1];
+  }
+
+
+  // for(int i=0;i<3;i++)
+  // {
+  //     memcpy(sort_temp,sample->sample_current_slide_window[i],SLIDING_WINDOW_SIZE*sizeof(uint16_t));
+  //     bubble_sort(sort_temp,SLIDING_WINDOW_SIZE);
+  //     sample->filtered_current[i] = sort_temp[SLIDING_WINDOW_SIZE/2];
+  // }
 }

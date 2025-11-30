@@ -8,7 +8,7 @@ FOC_State_t FOC_State = FOC_Stop;
 
 void Three_Phase_Inverter_Start(void)
 {
-    HAL_TIM_Base_Start(&htim1);
+    // HAL_TIM_Base_Start(&htim1);
 
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
@@ -21,7 +21,7 @@ void Three_Phase_Inverter_Start(void)
 
 void Three_Phase_Inverter_Stop(void)
 {
-    HAL_TIM_Base_Stop(&htim1);
+    // HAL_TIM_Base_Stop(&htim1);
 
     HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_1);
     HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_2);
@@ -36,11 +36,13 @@ void Three_Phase_Inverter_Stop(void)
 
 void Phase_Current_Sample_Start(void)
 {
+    HAL_TIM_Base_Start(&htim1);
     HAL_ADCEx_InjectedStart_IT(&hadc1);
 }
 
 void Phase_Current_Sample_Stop(void)
 {
+    HAL_TIM_Base_Stop(&htim1);
     HAL_ADCEx_InjectedStop_IT(&hadc1);
 }
 
@@ -54,4 +56,11 @@ void LIVE_Light_On(void)
 void LIVE_Light_Off(void)
 {
     HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13,GPIO_PIN_SET);
+}
+
+void Get_Current_Sample(uint16_t *current_sample)
+{
+    current_sample[0] = HAL_ADCEx_InjectedGetValue(&hadc1, ADC_INJECTED_RANK_1);
+    current_sample[1] = HAL_ADCEx_InjectedGetValue(&hadc1, ADC_INJECTED_RANK_2);
+    current_sample[2] = HAL_ADCEx_InjectedGetValue(&hadc1, ADC_INJECTED_RANK_3);
 }

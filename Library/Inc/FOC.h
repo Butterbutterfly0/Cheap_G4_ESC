@@ -21,4 +21,18 @@ extern void Anti_Clark_Transform(float Ualpha, float Ubeta, float *Ua, float *Ub
 
 extern void SVPWM( float Ualpha, float Ubeta, float VBarbus, 
             float* PWMa_duty, float* PWMb_duty, float* PWMc_duty);
+
+#define SLIDING_WINDOW_SIZE 1000
+typedef struct{
+    uint16_t sample_current[3];
+    
+    uint16_t sample_current_slide_window[3][SLIDING_WINDOW_SIZE];
+
+    uint16_t filtered_current[3]; 
+}
+sample_struct_t;
+
+void sample_struct_init(sample_struct_t *sample);
+
+void sample_struct_update(sample_struct_t *sample);
 #endif

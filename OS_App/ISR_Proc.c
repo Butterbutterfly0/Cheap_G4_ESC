@@ -31,7 +31,10 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 //     }
 //   }
 }
-
+__weak void Timer_emergency(void)
+{
+    
+}
 void HAL_ADCEx_InjectedConvCpltCallback(ADC_HandleTypeDef *hadc)
 {
     if(hadc->Instance==ADC1)
@@ -40,6 +43,7 @@ void HAL_ADCEx_InjectedConvCpltCallback(ADC_HandleTypeDef *hadc)
         // {
         //     osEventFlagsSet(ADC_event_Group,0x01<<1);
         // }
+        Timer_emergency();
     }
 }
 

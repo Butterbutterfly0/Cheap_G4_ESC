@@ -103,6 +103,18 @@
 },
 {
   "directory": "C:/Project/ESC_G4/build/Debug",
+  "command": "C:\\Software\\EMBEDD~1\\ARM_GCC\\142BCE~1.3RE\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -IC:/Project/ESC_G4/Library/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles\\ESC_G4.dir\\Library\\Src\\Common.c.obj -c C:\\Project\\ESC_G4\\Library\\Src\\Common.c",
+  "file": "C:/Project/ESC_G4/Library/Src/Common.c",
+  "output": "C:/Project/ESC_G4/build/Debug/CMakeFiles/ESC_G4.dir/Library/Src/Common.c.obj"
+},
+{
+  "directory": "C:/Project/ESC_G4/build/Debug",
+  "command": "C:\\Software\\EMBEDD~1\\ARM_GCC\\142BCE~1.3RE\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -IC:/Project/ESC_G4/Library/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles\\ESC_G4.dir\\Library\\Src\\VOFAplus.c.obj -c C:\\Project\\ESC_G4\\Library\\Src\\VOFAplus.c",
+  "file": "C:/Project/ESC_G4/Library/Src/VOFAplus.c",
+  "output": "C:/Project/ESC_G4/build/Debug/CMakeFiles/ESC_G4.dir/Library/Src/VOFAplus.c.obj"
+},
+{
+  "directory": "C:/Project/ESC_G4/build/Debug",
   "command": "C:\\Software\\EMBEDD~1\\ARM_GCC\\142BCE~1.3RE\\bin\\AR19DD~1.EXE -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -IC:/Project/ESC_G4/Library/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Core/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Project/ESC_G4/cmake/stm32cubemx/../../Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles\\ESC_G4.dir\\OS_App\\LIVE_task.c.obj -c C:\\Project\\ESC_G4\\OS_App\\LIVE_task.c",
   "file": "C:/Project/ESC_G4/OS_App/LIVE_task.c",
   "output": "C:/Project/ESC_G4/build/Debug/CMakeFiles/ESC_G4.dir/OS_App/LIVE_task.c.obj"

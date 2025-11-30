@@ -48,6 +48,8 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     Library/Src/FOC.c
     Library/Src/FOC_Portable.c
     Library/Src/OS_Support.c
+    Library/Src/Common.c
+    Library/Src/VOFAplus.c
 
     OS_App/LIVE_task.c
     OS_App/BTN_Set_task.c

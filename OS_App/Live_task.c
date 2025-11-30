@@ -3,7 +3,7 @@
 #include "cmsis_os2.h"
 #include "FOC_Portable.h"
 
-
+uint8_t start_counter = 0;
 
 uint32_t LED_Tick = 0;
 void Live_Task(void *argument)
@@ -17,8 +17,22 @@ void Live_Task(void *argument)
     LED_Tick++;
 
     if(FOC_State == FOC_Stop)
+    {
         vTaskDelay(500);
-    else
-        vTaskDelay(100);
+    }
+    else if(FOC_State == FOC_Start)
+    {
+        vTaskDelay(10);
+    }
+    else if(FOC_State == FOC_Ready)
+    {
+        start_counter++;
+        vTaskDelay(5);
+        if(start_counter>10)
+        {
+            FOC_State = FOC_Start;
+            Three_Phase_Inverter_Start();
+        }
+    }
   }
 }

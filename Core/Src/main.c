@@ -61,7 +61,7 @@
 #define UART2_FLOAT_TAIL_INDEX UART2_FLOAT_NUM*4
 #define UART2_TX_NUM UART2_FLOAT_TAIL_INDEX+4
 
-#define SLIDING_WINDOW_SIZE 4
+
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -123,10 +123,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   // }
 }
 
-// void bubble_sort(float *array, int size)
-// {
-//   int i, j;
-// }
+
 
 
 

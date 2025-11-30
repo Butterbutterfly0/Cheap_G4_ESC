@@ -4,6 +4,8 @@
 #include "FOC_Portable.h"
 #include "OS_Support.h"
 
+
+
 void BTN_Set_Task(void *argument)
 {
   for(;;)
@@ -24,8 +26,8 @@ void BTN_Set_Task(void *argument)
     // );
     if(FOC_State == FOC_Stop)
     {
-        FOC_State = FOC_Start;
-        Three_Phase_Inverter_Start();
+        FOC_State = FOC_Ready;
+        //Three_Phase_Inverter_Start();
     }
     else
     {
