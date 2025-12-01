@@ -116,6 +116,10 @@ void SVPWM( float Ualpha, float Ubeta, float VBarbus,
   Tb = Ta + T1/2;
   Tc = Tb + T2/2;
 
+  Ta = 1 - Ta;
+  Tb = 1 - Tb;
+  Tc = 1 - Tc;
+
   switch(which_section)
   {
     case 1:

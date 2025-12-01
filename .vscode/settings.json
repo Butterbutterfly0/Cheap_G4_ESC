@@ -47,6 +47,9 @@
         "freertos.h": "c",
         "portable.h": "c"
     },
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80,
     "cortex-debug.variableUseNaturalFormat": false,
     "C_Cpp.errorSquiggles": "enabled",
+    "editor.rulers": [75]
 }

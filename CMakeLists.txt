@@ -50,6 +50,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     Library/Src/OS_Support.c
     Library/Src/Common.c
     Library/Src/VOFAplus.c
+    Library/Src/SMO.c
 
     OS_App/LIVE_task.c
     OS_App/BTN_Set_task.c
