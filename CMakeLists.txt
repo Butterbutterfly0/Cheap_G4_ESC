@@ -59,6 +59,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     OS_App/BusBar_task.c
     OS_App/ISR_Proc.c
     OS_App/Buzzer_task.c
+    OS_App/CAN_task.c
 )
 
 # Add include paths

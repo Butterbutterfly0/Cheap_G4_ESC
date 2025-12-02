@@ -180,6 +180,42 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 //   }
 // }
 
+void Flash_OB_Configure(void) {
+    FLASH_OBProgramInitTypeDef OBInit;
+    HAL_StatusTypeDef status;
+
+    // 1. 解锁Flash和选项字节编程
+    HAL_FLASH_Unlock();
+    HAL_FLASH_OB_Unlock();
+
+    // 2. 获取当前的选项字节配置
+    HAL_FLASHEx_OBGetConfig(&OBInit);
+
+    // 3. 设置nBOOT0为1，表示从主闪存启动（类似于BOOT0=0的效果）
+    OBInit.OptionType = OPTIONBYTE_USER;
+    OBInit.USERType = OB_USER_nBOOT0;
+    OBInit.USERConfig = OB_nBOOT0_SET; // 设置nBOOT0 = 1
+
+    status = HAL_FLASHEx_OBProgram(&OBInit);
+    if (status != HAL_OK) {
+        // 错误处理
+    }
+
+    // 4. 设置nSWBOOT0，让芯片使用软件nBOOT0，忽略硬件BOOT0引脚
+    OBInit.OptionType = OPTIONBYTE_USER;
+    OBInit.USERType = OB_USER_nSWBOOT0;
+    OBInit.USERConfig = OB_BOOT0_FROM_OB; // 启动模式由选项字节决定，BOOT0引脚可作它用
+
+    status = HAL_FLASHEx_OBProgram(&OBInit);
+    if (status != HAL_OK) {
+        // 错误处理
+    }
+
+    // 5. 重新锁定并应用新配置
+    HAL_FLASH_OB_Lock();
+    HAL_FLASH_Lock();
+}
+
 
 /* USER CODE END 0 */
 
@@ -191,7 +227,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-	 //Flash_OB_Configure();
+	//  Flash_OB_Configure();
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -228,6 +264,7 @@ int main(void)
   MX_TIM15_Init();
   MX_TIM16_Init();
   MX_TIM17_Init();
+  MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
 	
 
@@ -251,6 +288,7 @@ int main(void)
 	// HAL_TIM_Base_Start(&htim1);
   // HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
   // enable_PWM_channel(0);
+  // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_RESET);
   /* USER CODE END 2 */
 
   /* Init scheduler */

@@ -96,6 +96,14 @@ __weak void BTN_Set_Task(void *argument)
     osDelay(1);
   }
 }
+
+__weak void CAN_Communication_task(void* argument)
+{
+  for(;;)
+  {
+    osDelay(1);
+  }
+} 
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void *argument);
@@ -142,6 +150,7 @@ void MX_FREERTOS_Init(void) {
   xTaskCreate(FOC_Task, "FOC_Task", 128, NULL, osPriorityHigh1, NULL);
   xTaskCreate(BusBar_Task, "BusBar_Task", 128, NULL, osPriorityNormal, NULL);
   xTaskCreate(Buzzer_Task, "Buzzer_Task", 128, NULL, osPriorityNormal, NULL);
+  // xTaskCreate(CAN_Communication_task, "CAN_Communication_task", 128, NULL, osPriorityNormal, NULL);
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
