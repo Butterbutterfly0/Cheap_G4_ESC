@@ -72,7 +72,7 @@ rule C_COMPILER__FreeRTOS_unscanned_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Software\SoftwareEngineering\CMake\bin\cmake.exe --regenerate-during-build -SC:\Project\ESC_G4 -BC:\Project\ESC_G4\build\Debug
+  command = C:\Software\SoftwareEngineering\CMake\bin\cmake.exe --regenerate-during-build -SC:\Project\ESC_G4_six -BC:\Project\ESC_G4_six\build\Debug
   description = Re-running CMake...
   generator = 1
 

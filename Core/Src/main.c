@@ -33,6 +33,7 @@
 #include <string.h>
 #include "FOC.h"
 #include "FOC_Portable.h"
+#include "Six_phase.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -122,9 +123,42 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   //   etheta_angle= etheta / 3.1415926 *180;
   // }
 }
+// typedef struct {
+//     uint32_t channel;
+//     uint32_t pin;
+//     uint32_t alternate;
+// } PWM_Channel;
 
+// PWM_Channel channels[] = {
+//     {TIM_CHANNEL_1, GPIO_PIN_8, GPIO_AF6_TIM1},
+//     {TIM_CHANNEL_2, GPIO_PIN_9, GPIO_AF6_TIM1},
+//     {TIM_CHANNEL_3, GPIO_PIN_10, GPIO_AF6_TIM1}
+// };
 
-
+// // 配置指定通道
+// void enable_PWM_channel(uint32_t ch_index) {
+//     // 配置GPIO为复用功能
+//     GPIO_InitTypeDef GPIO_InitStruct = {0};
+//     GPIO_InitStruct.Pin = channels[ch_index].pin;
+//     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+//     GPIO_InitStruct.Pull = GPIO_NOPULL;
+//     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+//     GPIO_InitStruct.Alternate = channels[ch_index].alternate;
+//     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+    
+//     // 使能定时器通道
+//     switch(channels[ch_index].channel) {
+//         case TIM_CHANNEL_1:
+//             TIM1->CCER |= TIM_CCER_CC1E;
+//             break;
+//         case TIM_CHANNEL_2:
+//             TIM1->CCER |= TIM_CCER_CC2E;
+//             break;
+//         case TIM_CHANNEL_3:
+//             TIM1->CCER |= TIM_CCER_CC3E;
+//             break;
+//     }
+// }
 
 
 
@@ -193,6 +227,7 @@ int main(void)
   MX_TIM8_Init();
   MX_TIM15_Init();
   MX_TIM16_Init();
+  MX_TIM17_Init();
   /* USER CODE BEGIN 2 */
 	
 
@@ -213,8 +248,9 @@ int main(void)
 //   uart2_buf[UART2_FLOAT_TAIL_INDEX+2] = 0x80;
 //   uart2_buf[UART2_FLOAT_TAIL_INDEX+3] = 0x7f;
 	
-	
-  uint8_t none[4]= {1,2,3,4};
+	// HAL_TIM_Base_Start(&htim1);
+  // HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+  // enable_PWM_channel(0);
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -275,6 +311,7 @@ int main(void)
 
   //   etheta_angle= etheta / 3.1415926 *180;
   // }
+  
     HAL_Delay(1);
 		// HAL_TIM_PWM_Start_DMA(&htim2,TIM_CHANNEL_4,(uint32_t*)LED_array,25);
     /* USER CODE END WHILE */

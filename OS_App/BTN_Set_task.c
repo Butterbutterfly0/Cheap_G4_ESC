@@ -32,7 +32,7 @@ void BTN_Set_Task(void *argument)
     else
     {
         FOC_State = FOC_Stop;
-        Three_Phase_Inverter_Stop();
+        // Three_Phase_Inverter_Stop();
     }
   }
 }

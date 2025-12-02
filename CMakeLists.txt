@@ -50,12 +50,15 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     Library/Src/OS_Support.c
     Library/Src/Common.c
     Library/Src/VOFAplus.c
+    Library/Src/SMO.c
+    Library/Src/Six_phase.c
 
     OS_App/LIVE_task.c
     OS_App/BTN_Set_task.c
     OS_App/FOC_task.c
     OS_App/BusBar_task.c
     OS_App/ISR_Proc.c
+    OS_App/Buzzer_task.c
 )
 
 # Add include paths

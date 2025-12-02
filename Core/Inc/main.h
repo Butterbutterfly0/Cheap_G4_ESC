@@ -85,12 +85,12 @@ void Error_Handler(void);
 #define V_MEAS_GPIO_Port GPIOB
 #define U_MEAS_Pin GPIO_PIN_12
 #define U_MEAS_GPIO_Port GPIOB
-#define LIN3_Pin GPIO_PIN_13
-#define LIN3_GPIO_Port GPIOB
+#define LIN1_Pin GPIO_PIN_13
+#define LIN1_GPIO_Port GPIOB
 #define LIN2_Pin GPIO_PIN_14
 #define LIN2_GPIO_Port GPIOB
-#define LIN1_Pin GPIO_PIN_15
-#define LIN1_GPIO_Port GPIOB
+#define LIN3_Pin GPIO_PIN_15
+#define LIN3_GPIO_Port GPIOB
 #define HIN3_Pin GPIO_PIN_8
 #define HIN3_GPIO_Port GPIOA
 #define HIN2_Pin GPIO_PIN_9

@@ -30,13 +30,15 @@ void Three_Phase_Inverter_Stop(void)
     HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_1);
     HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_2);
     HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_3);
+
+    HAL_TIM_Base_Start_IT(&htim1);
 }
 
 #include "adc.h"
 
 void Phase_Current_Sample_Start(void)
 {
-    HAL_TIM_Base_Start(&htim1);
+    HAL_TIM_Base_Start_IT(&htim1);
     HAL_ADCEx_InjectedStart_IT(&hadc1);
 }
 
