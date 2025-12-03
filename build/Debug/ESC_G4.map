@@ -6928,7 +6928,7 @@ LOAD C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3
                 0x08000000                g_pfnVectors
                 0x080001d8                        . = ALIGN (0x4)
 
-.text           0x080001e0     0xfba0
+.text           0x080001e0     0xfb98
                 0x080001e0                        . = ALIGN (0x4)
  *(.text)
  .text          0x080001e0      0x254 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_arm_muldf3.o)
@@ -7710,440 +7710,440 @@ LOAD C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3
                 0x0800bede                Error_Handler
  *fill*         0x0800beea        0x2 
  .text.MX_GPIO_Init
-                0x0800beec      0x144 CMakeFiles/ESC_G4.dir/Core/Src/gpio.c.obj
+                0x0800beec      0x164 CMakeFiles/ESC_G4.dir/Core/Src/gpio.c.obj
                 0x0800beec                MX_GPIO_Init
  .text.MX_FREERTOS_Init
-                0x0800c030       0x9c CMakeFiles/ESC_G4.dir/Core/Src/app_freertos.c.obj
-                0x0800c030                MX_FREERTOS_Init
+                0x0800c050       0x9c CMakeFiles/ESC_G4.dir/Core/Src/app_freertos.c.obj
+                0x0800c050                MX_FREERTOS_Init
  .text.StartDefaultTask
-                0x0800c0cc       0x10 CMakeFiles/ESC_G4.dir/Core/Src/app_freertos.c.obj
-                0x0800c0cc                StartDefaultTask
+                0x0800c0ec       0x10 CMakeFiles/ESC_G4.dir/Core/Src/app_freertos.c.obj
+                0x0800c0ec                StartDefaultTask
  .text.MX_ADC1_Init
-                0x0800c0dc      0x194 CMakeFiles/ESC_G4.dir/Core/Src/adc.c.obj
-                0x0800c0dc                MX_ADC1_Init
+                0x0800c0fc      0x194 CMakeFiles/ESC_G4.dir/Core/Src/adc.c.obj
+                0x0800c0fc                MX_ADC1_Init
  .text.MX_ADC2_Init
-                0x0800c270       0xd0 CMakeFiles/ESC_G4.dir/Core/Src/adc.c.obj
-                0x0800c270                MX_ADC2_Init
+                0x0800c290       0xd0 CMakeFiles/ESC_G4.dir/Core/Src/adc.c.obj
+                0x0800c290                MX_ADC2_Init
  .text.HAL_ADC_MspInit
-                0x0800c340      0x1fc CMakeFiles/ESC_G4.dir/Core/Src/adc.c.obj
-                0x0800c340                HAL_ADC_MspInit
+                0x0800c360      0x1fc CMakeFiles/ESC_G4.dir/Core/Src/adc.c.obj
+                0x0800c360                HAL_ADC_MspInit
  .text.MX_DMA_Init
-                0x0800c53c       0x84 CMakeFiles/ESC_G4.dir/Core/Src/dma.c.obj
-                0x0800c53c                MX_DMA_Init
+                0x0800c55c       0x84 CMakeFiles/ESC_G4.dir/Core/Src/dma.c.obj
+                0x0800c55c                MX_DMA_Init
  .text.MX_FDCAN1_Init
-                0x0800c5c0       0x8c CMakeFiles/ESC_G4.dir/Core/Src/fdcan.c.obj
-                0x0800c5c0                MX_FDCAN1_Init
+                0x0800c5e0       0x8c CMakeFiles/ESC_G4.dir/Core/Src/fdcan.c.obj
+                0x0800c5e0                MX_FDCAN1_Init
  .text.HAL_FDCAN_MspInit
-                0x0800c64c       0xb4 CMakeFiles/ESC_G4.dir/Core/Src/fdcan.c.obj
-                0x0800c64c                HAL_FDCAN_MspInit
+                0x0800c66c       0xb4 CMakeFiles/ESC_G4.dir/Core/Src/fdcan.c.obj
+                0x0800c66c                HAL_FDCAN_MspInit
  .text.MX_SPI1_Init
-                0x0800c700       0x7c CMakeFiles/ESC_G4.dir/Core/Src/spi.c.obj
-                0x0800c700                MX_SPI1_Init
+                0x0800c720       0x7c CMakeFiles/ESC_G4.dir/Core/Src/spi.c.obj
+                0x0800c720                MX_SPI1_Init
  .text.HAL_SPI_MspInit
-                0x0800c77c       0x84 CMakeFiles/ESC_G4.dir/Core/Src/spi.c.obj
-                0x0800c77c                HAL_SPI_MspInit
+                0x0800c79c       0x84 CMakeFiles/ESC_G4.dir/Core/Src/spi.c.obj
+                0x0800c79c                HAL_SPI_MspInit
  .text.MX_TIM1_Init
-                0x0800c800      0x190 CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
-                0x0800c800                MX_TIM1_Init
+                0x0800c820      0x1c4 CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
+                0x0800c820                MX_TIM1_Init
  .text.MX_TIM2_Init
-                0x0800c990       0xec CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
-                0x0800c990                MX_TIM2_Init
+                0x0800c9e4       0xec CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
+                0x0800c9e4                MX_TIM2_Init
  .text.MX_TIM3_Init
-                0x0800ca7c       0xec CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
-                0x0800ca7c                MX_TIM3_Init
+                0x0800cad0       0xec CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
+                0x0800cad0                MX_TIM3_Init
  .text.MX_TIM6_Init
-                0x0800cb68       0x6c CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
-                0x0800cb68                MX_TIM6_Init
+                0x0800cbbc       0x6c CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
+                0x0800cbbc                MX_TIM6_Init
  .text.MX_TIM8_Init
-                0x0800cbd4       0xec CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
-                0x0800cbd4                MX_TIM8_Init
+                0x0800cc28       0xec CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
+                0x0800cc28                MX_TIM8_Init
  .text.MX_TIM15_Init
-                0x0800ccc0       0xa4 CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
-                0x0800ccc0                MX_TIM15_Init
+                0x0800cd14       0xa4 CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
+                0x0800cd14                MX_TIM15_Init
  .text.MX_TIM16_Init
-                0x0800cd64       0x4c CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
-                0x0800cd64                MX_TIM16_Init
+                0x0800cdb8       0x4c CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
+                0x0800cdb8                MX_TIM16_Init
  .text.HAL_TIM_Base_MspInit
-                0x0800cdb0      0x1f0 CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
-                0x0800cdb0                HAL_TIM_Base_MspInit
+                0x0800ce04      0x1f0 CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
+                0x0800ce04                HAL_TIM_Base_MspInit
  .text.HAL_TIM_MspPostInit
-                0x0800cfa0      0x15c CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
-                0x0800cfa0                HAL_TIM_MspPostInit
+                0x0800cff4      0x100 CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
+                0x0800cff4                HAL_TIM_MspPostInit
  .text.MX_UART4_Init
-                0x0800d0fc       0xa0 CMakeFiles/ESC_G4.dir/Core/Src/usart.c.obj
-                0x0800d0fc                MX_UART4_Init
+                0x0800d0f4       0xa0 CMakeFiles/ESC_G4.dir/Core/Src/usart.c.obj
+                0x0800d0f4                MX_UART4_Init
  .text.MX_USART1_UART_Init
-                0x0800d19c       0x9c CMakeFiles/ESC_G4.dir/Core/Src/usart.c.obj
-                0x0800d19c                MX_USART1_UART_Init
+                0x0800d194       0x9c CMakeFiles/ESC_G4.dir/Core/Src/usart.c.obj
+                0x0800d194                MX_USART1_UART_Init
  .text.MX_USART2_UART_Init
-                0x0800d238       0x9c CMakeFiles/ESC_G4.dir/Core/Src/usart.c.obj
-                0x0800d238                MX_USART2_UART_Init
+                0x0800d230       0x9c CMakeFiles/ESC_G4.dir/Core/Src/usart.c.obj
+                0x0800d230                MX_USART2_UART_Init
  .text.HAL_UART_MspInit
-                0x0800d2d4      0x2c4 CMakeFiles/ESC_G4.dir/Core/Src/usart.c.obj
-                0x0800d2d4                HAL_UART_MspInit
+                0x0800d2cc      0x2c4 CMakeFiles/ESC_G4.dir/Core/Src/usart.c.obj
+                0x0800d2cc                HAL_UART_MspInit
  .text.NMI_Handler
-                0x0800d598        0x8 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
-                0x0800d598                NMI_Handler
+                0x0800d590        0x8 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0800d590                NMI_Handler
  .text.HardFault_Handler
-                0x0800d5a0        0x8 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
-                0x0800d5a0                HardFault_Handler
+                0x0800d598        0x8 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0800d598                HardFault_Handler
  .text.MemManage_Handler
-                0x0800d5a8        0x8 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
-                0x0800d5a8                MemManage_Handler
+                0x0800d5a0        0x8 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0800d5a0                MemManage_Handler
  .text.BusFault_Handler
-                0x0800d5b0        0x8 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
-                0x0800d5b0                BusFault_Handler
+                0x0800d5a8        0x8 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0800d5a8                BusFault_Handler
  .text.UsageFault_Handler
-                0x0800d5b8        0x8 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
-                0x0800d5b8                UsageFault_Handler
+                0x0800d5b0        0x8 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0800d5b0                UsageFault_Handler
  .text.DebugMon_Handler
-                0x0800d5c0        0xe CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
-                0x0800d5c0                DebugMon_Handler
+                0x0800d5b8        0xe CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0800d5b8                DebugMon_Handler
  .text.SysTick_Handler
-                0x0800d5ce       0x1a CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
-                0x0800d5ce                SysTick_Handler
+                0x0800d5c6       0x1a CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0800d5c6                SysTick_Handler
  .text.EXTI4_IRQHandler
-                0x0800d5e8        0xe CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
-                0x0800d5e8                EXTI4_IRQHandler
- *fill*         0x0800d5f6        0x2 
+                0x0800d5e0        0xe CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0800d5e0                EXTI4_IRQHandler
+ *fill*         0x0800d5ee        0x2 
  .text.DMA1_Channel1_IRQHandler
-                0x0800d5f8       0x14 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
-                0x0800d5f8                DMA1_Channel1_IRQHandler
+                0x0800d5f0       0x14 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0800d5f0                DMA1_Channel1_IRQHandler
  .text.DMA1_Channel2_IRQHandler
-                0x0800d60c       0x14 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
-                0x0800d60c                DMA1_Channel2_IRQHandler
+                0x0800d604       0x14 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0800d604                DMA1_Channel2_IRQHandler
  .text.DMA1_Channel3_IRQHandler
-                0x0800d620       0x14 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
-                0x0800d620                DMA1_Channel3_IRQHandler
+                0x0800d618       0x14 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0800d618                DMA1_Channel3_IRQHandler
  .text.DMA1_Channel4_IRQHandler
-                0x0800d634       0x14 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
-                0x0800d634                DMA1_Channel4_IRQHandler
+                0x0800d62c       0x14 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0800d62c                DMA1_Channel4_IRQHandler
  .text.ADC1_2_IRQHandler
-                0x0800d648       0x1c CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
-                0x0800d648                ADC1_2_IRQHandler
+                0x0800d640       0x1c CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0800d640                ADC1_2_IRQHandler
  .text.TIM2_IRQHandler
-                0x0800d664       0x14 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
-                0x0800d664                TIM2_IRQHandler
+                0x0800d65c       0x14 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0800d65c                TIM2_IRQHandler
  .text.USART1_IRQHandler
-                0x0800d678       0x14 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
-                0x0800d678                USART1_IRQHandler
+                0x0800d670       0x14 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0800d670                USART1_IRQHandler
  .text.USART2_IRQHandler
-                0x0800d68c       0x14 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
-                0x0800d68c                USART2_IRQHandler
+                0x0800d684       0x14 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0800d684                USART2_IRQHandler
  .text.TIM6_DAC_IRQHandler
-                0x0800d6a0       0x14 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
-                0x0800d6a0                TIM6_DAC_IRQHandler
+                0x0800d698       0x14 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0800d698                TIM6_DAC_IRQHandler
  .text.HAL_MspInit
-                0x0800d6b4       0x54 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_hal_msp.c.obj
-                0x0800d6b4                HAL_MspInit
+                0x0800d6ac       0x54 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+                0x0800d6ac                HAL_MspInit
  .text.Reset_Handler
-                0x0800d708       0x50 CMakeFiles/ESC_G4.dir/startup_stm32g431xx.s.obj
-                0x0800d708                Reset_Handler
+                0x0800d700       0x50 CMakeFiles/ESC_G4.dir/startup_stm32g431xx.s.obj
+                0x0800d700                Reset_Handler
  .text.Default_Handler
-                0x0800d758        0x2 CMakeFiles/ESC_G4.dir/startup_stm32g431xx.s.obj
-                0x0800d758                RTC_Alarm_IRQHandler
-                0x0800d758                EXTI2_IRQHandler
-                0x0800d758                TIM8_TRG_COM_IRQHandler
-                0x0800d758                TIM8_CC_IRQHandler
-                0x0800d758                TIM1_CC_IRQHandler
-                0x0800d758                USB_HP_IRQHandler
-                0x0800d758                CORDIC_IRQHandler
-                0x0800d758                EXTI3_IRQHandler
-                0x0800d758                I2C3_ER_IRQHandler
-                0x0800d758                EXTI0_IRQHandler
-                0x0800d758                I2C2_EV_IRQHandler
-                0x0800d758                FPU_IRQHandler
-                0x0800d758                FDCAN1_IT1_IRQHandler
-                0x0800d758                TIM1_UP_TIM16_IRQHandler
-                0x0800d758                SPI1_IRQHandler
-                0x0800d758                TIM8_UP_IRQHandler
-                0x0800d758                DMA2_Channel2_IRQHandler
-                0x0800d758                USART3_IRQHandler
-                0x0800d758                TIM4_IRQHandler
-                0x0800d758                DMA2_Channel1_IRQHandler
-                0x0800d758                I2C1_EV_IRQHandler
-                0x0800d758                DMA1_Channel6_IRQHandler
-                0x0800d758                UART4_IRQHandler
-                0x0800d758                DMA2_Channel4_IRQHandler
-                0x0800d758                TIM3_IRQHandler
-                0x0800d758                RCC_IRQHandler
-                0x0800d758                Default_Handler
-                0x0800d758                RTC_TAMP_LSECSS_IRQHandler
-                0x0800d758                FMAC_IRQHandler
-                0x0800d758                EXTI15_10_IRQHandler
-                0x0800d758                TIM7_IRQHandler
-                0x0800d758                UCPD1_IRQHandler
-                0x0800d758                I2C3_EV_IRQHandler
-                0x0800d758                EXTI9_5_IRQHandler
-                0x0800d758                RTC_WKUP_IRQHandler
-                0x0800d758                PVD_PVM_IRQHandler
-                0x0800d758                SPI2_IRQHandler
-                0x0800d758                DMA2_Channel5_IRQHandler
-                0x0800d758                CRS_IRQHandler
-                0x0800d758                DMA1_Channel5_IRQHandler
-                0x0800d758                USB_LP_IRQHandler
-                0x0800d758                RNG_IRQHandler
-                0x0800d758                TIM1_TRG_COM_TIM17_IRQHandler
-                0x0800d758                WWDG_IRQHandler
-                0x0800d758                LPUART1_IRQHandler
-                0x0800d758                DMA2_Channel6_IRQHandler
-                0x0800d758                FDCAN1_IT0_IRQHandler
-                0x0800d758                COMP1_2_3_IRQHandler
-                0x0800d758                EXTI1_IRQHandler
-                0x0800d758                I2C2_ER_IRQHandler
-                0x0800d758                TIM8_BRK_IRQHandler
-                0x0800d758                FLASH_IRQHandler
-                0x0800d758                SPI3_IRQHandler
-                0x0800d758                I2C1_ER_IRQHandler
-                0x0800d758                LPTIM1_IRQHandler
-                0x0800d758                DMAMUX_OVR_IRQHandler
-                0x0800d758                USBWakeUp_IRQHandler
-                0x0800d758                SAI1_IRQHandler
-                0x0800d758                DMA2_Channel3_IRQHandler
-                0x0800d758                COMP4_IRQHandler
-                0x0800d758                TIM1_BRK_TIM15_IRQHandler
- *fill*         0x0800d75a        0x6 
+                0x0800d750        0x2 CMakeFiles/ESC_G4.dir/startup_stm32g431xx.s.obj
+                0x0800d750                RTC_Alarm_IRQHandler
+                0x0800d750                EXTI2_IRQHandler
+                0x0800d750                TIM8_TRG_COM_IRQHandler
+                0x0800d750                TIM8_CC_IRQHandler
+                0x0800d750                TIM1_CC_IRQHandler
+                0x0800d750                USB_HP_IRQHandler
+                0x0800d750                CORDIC_IRQHandler
+                0x0800d750                EXTI3_IRQHandler
+                0x0800d750                I2C3_ER_IRQHandler
+                0x0800d750                EXTI0_IRQHandler
+                0x0800d750                I2C2_EV_IRQHandler
+                0x0800d750                FPU_IRQHandler
+                0x0800d750                FDCAN1_IT1_IRQHandler
+                0x0800d750                TIM1_UP_TIM16_IRQHandler
+                0x0800d750                SPI1_IRQHandler
+                0x0800d750                TIM8_UP_IRQHandler
+                0x0800d750                DMA2_Channel2_IRQHandler
+                0x0800d750                USART3_IRQHandler
+                0x0800d750                TIM4_IRQHandler
+                0x0800d750                DMA2_Channel1_IRQHandler
+                0x0800d750                I2C1_EV_IRQHandler
+                0x0800d750                DMA1_Channel6_IRQHandler
+                0x0800d750                UART4_IRQHandler
+                0x0800d750                DMA2_Channel4_IRQHandler
+                0x0800d750                TIM3_IRQHandler
+                0x0800d750                RCC_IRQHandler
+                0x0800d750                Default_Handler
+                0x0800d750                RTC_TAMP_LSECSS_IRQHandler
+                0x0800d750                FMAC_IRQHandler
+                0x0800d750                EXTI15_10_IRQHandler
+                0x0800d750                TIM7_IRQHandler
+                0x0800d750                UCPD1_IRQHandler
+                0x0800d750                I2C3_EV_IRQHandler
+                0x0800d750                EXTI9_5_IRQHandler
+                0x0800d750                RTC_WKUP_IRQHandler
+                0x0800d750                PVD_PVM_IRQHandler
+                0x0800d750                SPI2_IRQHandler
+                0x0800d750                DMA2_Channel5_IRQHandler
+                0x0800d750                CRS_IRQHandler
+                0x0800d750                DMA1_Channel5_IRQHandler
+                0x0800d750                USB_LP_IRQHandler
+                0x0800d750                RNG_IRQHandler
+                0x0800d750                TIM1_TRG_COM_TIM17_IRQHandler
+                0x0800d750                WWDG_IRQHandler
+                0x0800d750                LPUART1_IRQHandler
+                0x0800d750                DMA2_Channel6_IRQHandler
+                0x0800d750                FDCAN1_IT0_IRQHandler
+                0x0800d750                COMP1_2_3_IRQHandler
+                0x0800d750                EXTI1_IRQHandler
+                0x0800d750                I2C2_ER_IRQHandler
+                0x0800d750                TIM8_BRK_IRQHandler
+                0x0800d750                FLASH_IRQHandler
+                0x0800d750                SPI3_IRQHandler
+                0x0800d750                I2C1_ER_IRQHandler
+                0x0800d750                LPTIM1_IRQHandler
+                0x0800d750                DMAMUX_OVR_IRQHandler
+                0x0800d750                USBWakeUp_IRQHandler
+                0x0800d750                SAI1_IRQHandler
+                0x0800d750                DMA2_Channel3_IRQHandler
+                0x0800d750                COMP4_IRQHandler
+                0x0800d750                TIM1_BRK_TIM15_IRQHandler
+ *fill*         0x0800d752        0x6 
  .text.Clark_Transform
-                0x0800d760       0xb4 CMakeFiles/ESC_G4.dir/Library/Src/FOC.c.obj
-                0x0800d760                Clark_Transform
+                0x0800d758       0xb4 CMakeFiles/ESC_G4.dir/Library/Src/FOC.c.obj
+                0x0800d758                Clark_Transform
  .text.Park_Transform
-                0x0800d814       0x7e CMakeFiles/ESC_G4.dir/Library/Src/FOC.c.obj
-                0x0800d814                Park_Transform
+                0x0800d80c       0x7e CMakeFiles/ESC_G4.dir/Library/Src/FOC.c.obj
+                0x0800d80c                Park_Transform
  .text.Anti_Park_Transform
-                0x0800d892       0x7a CMakeFiles/ESC_G4.dir/Library/Src/FOC.c.obj
-                0x0800d892                Anti_Park_Transform
- .text.SVPWM    0x0800d90c      0x424 CMakeFiles/ESC_G4.dir/Library/Src/FOC.c.obj
-                0x0800d90c                SVPWM
+                0x0800d88a       0x7a CMakeFiles/ESC_G4.dir/Library/Src/FOC.c.obj
+                0x0800d88a                Anti_Park_Transform
+ .text.SVPWM    0x0800d904      0x424 CMakeFiles/ESC_G4.dir/Library/Src/FOC.c.obj
+                0x0800d904                SVPWM
  .text.sample_struct_init
-                0x0800dd30       0x5e CMakeFiles/ESC_G4.dir/Library/Src/FOC.c.obj
-                0x0800dd30                sample_struct_init
+                0x0800dd28       0x5e CMakeFiles/ESC_G4.dir/Library/Src/FOC.c.obj
+                0x0800dd28                sample_struct_init
  .text.sample_struct_update
-                0x0800dd8e       0xc6 CMakeFiles/ESC_G4.dir/Library/Src/FOC.c.obj
-                0x0800dd8e                sample_struct_update
+                0x0800dd86       0xc6 CMakeFiles/ESC_G4.dir/Library/Src/FOC.c.obj
+                0x0800dd86                sample_struct_update
  .text.Three_Phase_Inverter_Start
-                0x0800de54       0x3c CMakeFiles/ESC_G4.dir/Library/Src/FOC_Portable.c.obj
-                0x0800de54                Three_Phase_Inverter_Start
+                0x0800de4c       0x3c CMakeFiles/ESC_G4.dir/Library/Src/FOC_Portable.c.obj
+                0x0800de4c                Three_Phase_Inverter_Start
  .text.Three_Phase_Inverter_Stop
-                0x0800de90       0x3c CMakeFiles/ESC_G4.dir/Library/Src/FOC_Portable.c.obj
-                0x0800de90                Three_Phase_Inverter_Stop
+                0x0800de88       0x3c CMakeFiles/ESC_G4.dir/Library/Src/FOC_Portable.c.obj
+                0x0800de88                Three_Phase_Inverter_Stop
  .text.Phase_Current_Sample_Start
-                0x0800decc       0x1c CMakeFiles/ESC_G4.dir/Library/Src/FOC_Portable.c.obj
-                0x0800decc                Phase_Current_Sample_Start
+                0x0800dec4       0x1c CMakeFiles/ESC_G4.dir/Library/Src/FOC_Portable.c.obj
+                0x0800dec4                Phase_Current_Sample_Start
  .text.LIVE_Light_On
-                0x0800dee8       0x18 CMakeFiles/ESC_G4.dir/Library/Src/FOC_Portable.c.obj
-                0x0800dee8                LIVE_Light_On
+                0x0800dee0       0x18 CMakeFiles/ESC_G4.dir/Library/Src/FOC_Portable.c.obj
+                0x0800dee0                LIVE_Light_On
  .text.LIVE_Light_Off
-                0x0800df00       0x18 CMakeFiles/ESC_G4.dir/Library/Src/FOC_Portable.c.obj
-                0x0800df00                LIVE_Light_Off
+                0x0800def8       0x18 CMakeFiles/ESC_G4.dir/Library/Src/FOC_Portable.c.obj
+                0x0800def8                LIVE_Light_Off
  .text.Get_Current_Sample
-                0x0800df18       0x4c CMakeFiles/ESC_G4.dir/Library/Src/FOC_Portable.c.obj
-                0x0800df18                Get_Current_Sample
- .text.OS_Init  0x0800df64       0x38 CMakeFiles/ESC_G4.dir/Library/Src/OS_Support.c.obj
-                0x0800df64                OS_Init
+                0x0800df10       0x4c CMakeFiles/ESC_G4.dir/Library/Src/FOC_Portable.c.obj
+                0x0800df10                Get_Current_Sample
+ .text.OS_Init  0x0800df5c       0x38 CMakeFiles/ESC_G4.dir/Library/Src/OS_Support.c.obj
+                0x0800df5c                OS_Init
  .text.VOFA_tx_frame_init
-                0x0800df9c       0x80 CMakeFiles/ESC_G4.dir/Library/Src/VOFAplus.c.obj
-                0x0800df9c                VOFA_tx_frame_init
+                0x0800df94       0x80 CMakeFiles/ESC_G4.dir/Library/Src/VOFAplus.c.obj
+                0x0800df94                VOFA_tx_frame_init
  .text.VOFA_tx_frame_update
-                0x0800e01c       0x24 CMakeFiles/ESC_G4.dir/Library/Src/VOFAplus.c.obj
-                0x0800e01c                VOFA_tx_frame_update
+                0x0800e014       0x24 CMakeFiles/ESC_G4.dir/Library/Src/VOFAplus.c.obj
+                0x0800e014                VOFA_tx_frame_update
  .text.VOFA_tx_frame_get_u8ptr
-                0x0800e040       0x18 CMakeFiles/ESC_G4.dir/Library/Src/VOFAplus.c.obj
-                0x0800e040                VOFA_tx_frame_get_u8ptr
+                0x0800e038       0x18 CMakeFiles/ESC_G4.dir/Library/Src/VOFAplus.c.obj
+                0x0800e038                VOFA_tx_frame_get_u8ptr
  .text.VOFA_tx_frame_get_u8_num
-                0x0800e058       0x18 CMakeFiles/ESC_G4.dir/Library/Src/VOFAplus.c.obj
-                0x0800e058                VOFA_tx_frame_get_u8_num
+                0x0800e050       0x18 CMakeFiles/ESC_G4.dir/Library/Src/VOFAplus.c.obj
+                0x0800e050                VOFA_tx_frame_get_u8_num
  .text.smo_init
-                0x0800e070       0x8c CMakeFiles/ESC_G4.dir/Library/Src/SMO.c.obj
-                0x0800e070                smo_init
- *fill*         0x0800e0fc        0x4 
+                0x0800e068       0x8c CMakeFiles/ESC_G4.dir/Library/Src/SMO.c.obj
+                0x0800e068                smo_init
+ *fill*         0x0800e0f4        0x4 
  .text.smo_update
-                0x0800e100      0x270 CMakeFiles/ESC_G4.dir/Library/Src/SMO.c.obj
-                0x0800e100                smo_update
+                0x0800e0f8      0x270 CMakeFiles/ESC_G4.dir/Library/Src/SMO.c.obj
+                0x0800e0f8                smo_update
  .text.Live_Task
-                0x0800e370       0x84 CMakeFiles/ESC_G4.dir/OS_App/LIVE_task.c.obj
-                0x0800e370                Live_Task
+                0x0800e368       0x84 CMakeFiles/ESC_G4.dir/OS_App/LIVE_task.c.obj
+                0x0800e368                Live_Task
  .text.BTN_Set_Task
-                0x0800e3f4       0x4c CMakeFiles/ESC_G4.dir/OS_App/BTN_Set_task.c.obj
-                0x0800e3f4                BTN_Set_Task
+                0x0800e3ec       0x4c CMakeFiles/ESC_G4.dir/OS_App/BTN_Set_task.c.obj
+                0x0800e3ec                BTN_Set_Task
  .text.FOC_Task
-                0x0800e440       0x48 CMakeFiles/ESC_G4.dir/OS_App/FOC_task.c.obj
-                0x0800e440                FOC_Task
+                0x0800e438       0x48 CMakeFiles/ESC_G4.dir/OS_App/FOC_task.c.obj
+                0x0800e438                FOC_Task
  .text.Timer_emergency
-                0x0800e488      0x41c CMakeFiles/ESC_G4.dir/OS_App/FOC_task.c.obj
-                0x0800e488                Timer_emergency
+                0x0800e480      0x41c CMakeFiles/ESC_G4.dir/OS_App/FOC_task.c.obj
+                0x0800e480                Timer_emergency
  .text.BusBar_Task
-                0x0800e8a4       0xec CMakeFiles/ESC_G4.dir/OS_App/BusBar_task.c.obj
-                0x0800e8a4                BusBar_Task
+                0x0800e89c       0xec CMakeFiles/ESC_G4.dir/OS_App/BusBar_task.c.obj
+                0x0800e89c                BusBar_Task
  .text.HAL_GPIO_EXTI_Callback
-                0x0800e990       0x30 CMakeFiles/ESC_G4.dir/OS_App/ISR_Proc.c.obj
-                0x0800e990                HAL_GPIO_EXTI_Callback
+                0x0800e988       0x30 CMakeFiles/ESC_G4.dir/OS_App/ISR_Proc.c.obj
+                0x0800e988                HAL_GPIO_EXTI_Callback
  .text.HAL_ADCEx_InjectedConvCpltCallback
-                0x0800e9c0       0x1e CMakeFiles/ESC_G4.dir/OS_App/ISR_Proc.c.obj
-                0x0800e9c0                HAL_ADCEx_InjectedConvCpltCallback
- *fill*         0x0800e9de        0x2 
+                0x0800e9b8       0x1e CMakeFiles/ESC_G4.dir/OS_App/ISR_Proc.c.obj
+                0x0800e9b8                HAL_ADCEx_InjectedConvCpltCallback
+ *fill*         0x0800e9d6        0x2 
  .text.HAL_ADC_ConvCpltCallback
-                0x0800e9e0       0x38 CMakeFiles/ESC_G4.dir/OS_App/ISR_Proc.c.obj
-                0x0800e9e0                HAL_ADC_ConvCpltCallback
- .text.atan2f   0x0800ea18        0x4 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_atan2.o)
-                0x0800ea18                atan2f
- .text.cosf     0x0800ea1c       0x70 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_cos.o)
-                0x0800ea1c                cosf
- .text.sinf     0x0800ea8c       0x74 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_sin.o)
-                0x0800ea8c                sinf
+                0x0800e9d8       0x38 CMakeFiles/ESC_G4.dir/OS_App/ISR_Proc.c.obj
+                0x0800e9d8                HAL_ADC_ConvCpltCallback
+ .text.atan2f   0x0800ea10        0x4 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-wf_atan2.o)
+                0x0800ea10                atan2f
+ .text.cosf     0x0800ea14       0x70 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_cos.o)
+                0x0800ea14                cosf
+ .text.sinf     0x0800ea84       0x74 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_sin.o)
+                0x0800ea84                sinf
  .text.__kernel_cosf
-                0x0800eb00      0x104 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_cos.o)
-                0x0800eb00                __kernel_cosf
+                0x0800eaf8      0x104 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_cos.o)
+                0x0800eaf8                __kernel_cosf
  .text.__kernel_sinf
-                0x0800ec04       0x90 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_sin.o)
-                0x0800ec04                __kernel_sinf
+                0x0800ebfc       0x90 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_sin.o)
+                0x0800ebfc                __kernel_sinf
  .text.__ieee754_atan2f
-                0x0800ec94      0x14c C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
-                0x0800ec94                __ieee754_atan2f
+                0x0800ec8c      0x14c C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
+                0x0800ec8c                __ieee754_atan2f
  .text.__ieee754_rem_pio2f
-                0x0800ede0      0x26c C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_rem_pio2.o)
-                0x0800ede0                __ieee754_rem_pio2f
- .text.atanf    0x0800f04c      0x1a4 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
-                0x0800f04c                atanf
- .text.fabsf    0x0800f1f0       0x10 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fabs.o)
-                0x0800f1f0                fabsf
+                0x0800edd8      0x26c C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_rem_pio2.o)
+                0x0800edd8                __ieee754_rem_pio2f
+ .text.atanf    0x0800f044      0x1a4 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
+                0x0800f044                atanf
+ .text.fabsf    0x0800f1e8       0x10 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_fabs.o)
+                0x0800f1e8                fabsf
  .text.__kernel_rem_pio2f
-                0x0800f200      0x68c C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_rem_pio2.o)
-                0x0800f200                __kernel_rem_pio2f
- .text.scalbnf  0x0800f88c       0xdc C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_scalbn.o)
-                0x0800f88c                scalbnf
- .text.floorf   0x0800f968       0x94 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_floor.o)
-                0x0800f968                floorf
+                0x0800f1f8      0x68c C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_rem_pio2.o)
+                0x0800f1f8                __kernel_rem_pio2f
+ .text.scalbnf  0x0800f884       0xdc C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_scalbn.o)
+                0x0800f884                scalbnf
+ .text.floorf   0x0800f960       0x94 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_floor.o)
+                0x0800f960                floorf
  .text.__udivmoddi4
-                0x0800f9fc      0x2f8 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x0800f9fc                __udivmoddi4
- .text.memset   0x0800fcf4       0x10 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
-                0x0800fcf4                memset
+                0x0800f9f4      0x2f8 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x0800f9f4                __udivmoddi4
+ .text.memset   0x0800fcec       0x10 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memset.o)
+                0x0800fcec                memset
  .text.__libc_init_array
-                0x0800fd04       0x48 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
-                0x0800fd04                __libc_init_array
- .text.memcpy   0x0800fd4c       0x1c C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memcpy-stub.o)
-                0x0800fd4c                memcpy
+                0x0800fcfc       0x48 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+                0x0800fcfc                __libc_init_array
+ .text.memcpy   0x0800fd44       0x1c C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-memcpy-stub.o)
+                0x0800fd44                memcpy
  *(.glue_7)
- .glue_7        0x0800fd68        0x0 linker stubs
+ .glue_7        0x0800fd60        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0800fd68        0x0 linker stubs
+ .glue_7t       0x0800fd60        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0800fd68        0x0 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x0800fd60        0x0 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x0800fd68        0x4 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x0800fd68                _init
- .init          0x0800fd6c        0x8 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x0800fd60        0x4 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x0800fd60                _init
+ .init          0x0800fd64        0x8 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x0800fd74        0x4 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x0800fd74                _fini
- .fini          0x0800fd78        0x8 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x0800fd80                        . = ALIGN (0x4)
-                0x0800fd80                        _etext = .
+ .fini          0x0800fd6c        0x4 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x0800fd6c                _fini
+ .fini          0x0800fd70        0x8 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x0800fd78                        . = ALIGN (0x4)
+                0x0800fd78                        _etext = .
 
-.vfp11_veneer   0x0800fd80        0x0
- .vfp11_veneer  0x0800fd80        0x0 linker stubs
+.vfp11_veneer   0x0800fd78        0x0
+ .vfp11_veneer  0x0800fd78        0x0 linker stubs
 
-.v4_bx          0x0800fd80        0x0
- .v4_bx         0x0800fd80        0x0 linker stubs
+.v4_bx          0x0800fd78        0x0
+ .v4_bx         0x0800fd78        0x0 linker stubs
 
-.iplt           0x0800fd80        0x0
- .iplt          0x0800fd80        0x0 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x0800fd78        0x0
+ .iplt          0x0800fd78        0x0 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x0800fd80      0x50c
-                0x0800fd80                        . = ALIGN (0x4)
+.rodata         0x0800fd78      0x50c
+                0x0800fd78                        . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x0800fd80        0x5 cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- *fill*         0x0800fd85        0x3 
- .rodata        0x0800fd88        0xd cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
- *fill*         0x0800fd95        0x3 
- .rodata        0x0800fd98       0x40 CMakeFiles/ESC_G4.dir/Core/Src/app_freertos.c.obj
- .rodata        0x0800fdd8       0x24 CMakeFiles/ESC_G4.dir/Library/Src/OS_Support.c.obj
+ .rodata        0x0800fd78        0x5 cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x0800fd7d        0x3 
+ .rodata        0x0800fd80        0xd cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+ *fill*         0x0800fd8d        0x3 
+ .rodata        0x0800fd90       0x40 CMakeFiles/ESC_G4.dir/Core/Src/app_freertos.c.obj
+ .rodata        0x0800fdd0       0x24 CMakeFiles/ESC_G4.dir/Library/Src/OS_Support.c.obj
  *(.rodata*)
  .rodata.AHBPrescTable
-                0x0800fdfc       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
-                0x0800fdfc                AHBPrescTable
+                0x0800fdf4       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
+                0x0800fdf4                AHBPrescTable
  .rodata.APBPrescTable
-                0x0800fe0c        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
-                0x0800fe0c                APBPrescTable
+                0x0800fe04        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
+                0x0800fe04                APBPrescTable
  .rodata.UARTPrescTable
-                0x0800fe14       0x18 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
-                0x0800fe14                UARTPrescTable
+                0x0800fe0c       0x18 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c.obj
+                0x0800fe0c                UARTPrescTable
  .rodata.numerator.1
-                0x0800fe2c        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
+                0x0800fe24        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
  .rodata.denominator.0
-                0x0800fe34        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
+                0x0800fe2c        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c.obj
  .rodata.defaultTask_attributes
-                0x0800fe3c       0x24 CMakeFiles/ESC_G4.dir/Core/Src/app_freertos.c.obj
-                0x0800fe3c                defaultTask_attributes
+                0x0800fe34       0x24 CMakeFiles/ESC_G4.dir/Core/Src/app_freertos.c.obj
+                0x0800fe34                defaultTask_attributes
  .rodata.sqrt3.0
-                0x0800fe60        0x4 CMakeFiles/ESC_G4.dir/Library/Src/FOC.c.obj
+                0x0800fe58        0x4 CMakeFiles/ESC_G4.dir/Library/Src/FOC.c.obj
  .rodata.EXTI_event_Group_attributes
-                0x0800fe64       0x10 CMakeFiles/ESC_G4.dir/Library/Src/OS_Support.c.obj
-                0x0800fe64                EXTI_event_Group_attributes
+                0x0800fe5c       0x10 CMakeFiles/ESC_G4.dir/Library/Src/OS_Support.c.obj
+                0x0800fe5c                EXTI_event_Group_attributes
  .rodata.ADC_event_Group_attributes
-                0x0800fe74       0x10 CMakeFiles/ESC_G4.dir/Library/Src/OS_Support.c.obj
-                0x0800fe74                ADC_event_Group_attributes
+                0x0800fe6c       0x10 CMakeFiles/ESC_G4.dir/Library/Src/OS_Support.c.obj
+                0x0800fe6c                ADC_event_Group_attributes
  .rodata.CSWTCH.9
-                0x0800fe84        0xc C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
+                0x0800fe7c        0xc C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
  .rodata.CSWTCH.8
-                0x0800fe90        0xc C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
+                0x0800fe88        0xc C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_atan2.o)
  .rodata.npio2_hw
-                0x0800fe9c       0x80 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_rem_pio2.o)
+                0x0800fe94       0x80 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_rem_pio2.o)
  .rodata.two_over_pi
-                0x0800ff1c      0x318 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_rem_pio2.o)
+                0x0800ff14      0x318 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-ef_rem_pio2.o)
  .rodata.atanlo
-                0x08010234       0x10 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
+                0x0801022c       0x10 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
  .rodata.atanhi
-                0x08010244       0x10 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
- .rodata.PIo2   0x08010254       0x2c C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_rem_pio2.o)
+                0x0801023c       0x10 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-sf_atan.o)
+ .rodata.PIo2   0x0801024c       0x2c C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_rem_pio2.o)
  .rodata.init_jk
-                0x08010280        0xc C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_rem_pio2.o)
-                0x0801028c                        . = ALIGN (0x4)
+                0x08010278        0xc C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a(libm_a-kf_rem_pio2.o)
+                0x08010284                        . = ALIGN (0x4)
 
-.ARM.extab      0x0801028c        0x0
-                0x0801028c                        . = ALIGN (0x4)
+.ARM.extab      0x08010284        0x0
+                0x08010284                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0801028c                        . = ALIGN (0x4)
+                0x08010284                        . = ALIGN (0x4)
 
-.ARM            0x0801028c        0x8
-                0x0801028c                        . = ALIGN (0x4)
-                0x0801028c                        __exidx_start = .
+.ARM            0x08010284        0x8
+                0x08010284                        . = ALIGN (0x4)
+                0x08010284                        __exidx_start = .
  *(.ARM.exidx*)
  .ARM.exidx.text.__udivmoddi4
-                0x0801028c        0x8 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x08010294                        __exidx_end = .
-                0x08010294                        . = ALIGN (0x4)
+                0x08010284        0x8 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x0801028c                        __exidx_end = .
+                0x0801028c                        . = ALIGN (0x4)
 
-.preinit_array  0x08010294        0x0
-                0x08010294                        . = ALIGN (0x4)
-                0x08010294                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0801028c        0x0
+                0x0801028c                        . = ALIGN (0x4)
+                0x0801028c                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08010294                        PROVIDE (__preinit_array_end = .)
-                0x08010294                        . = ALIGN (0x4)
+                0x0801028c                        PROVIDE (__preinit_array_end = .)
+                0x0801028c                        . = ALIGN (0x4)
 
-.init_array     0x08010294        0x4
-                0x08010294                        . = ALIGN (0x4)
-                0x08010294                        PROVIDE (__init_array_start = .)
+.init_array     0x0801028c        0x4
+                0x0801028c                        . = ALIGN (0x4)
+                0x0801028c                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08010294        0x4 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08010298                        PROVIDE (__init_array_end = .)
-                0x08010298                        . = ALIGN (0x4)
+ .init_array    0x0801028c        0x4 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x08010290                        PROVIDE (__init_array_end = .)
+                0x08010290                        . = ALIGN (0x4)
 
-.fini_array     0x08010298        0x4
-                0x08010298                        . = ALIGN (0x4)
+.fini_array     0x08010290        0x4
+                0x08010290                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08010298        0x4 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini_array    0x08010290        0x4 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0801029c                        . = ALIGN (0x4)
-                0x0801029c                        _sidata = LOADADDR (.data)
+                0x08010294                        . = ALIGN (0x4)
+                0x08010294                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x0801029c        0x0
- .rel.iplt      0x0801029c        0x0 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x08010294        0x0
+ .rel.iplt      0x08010294        0x0 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.data           0x20000000       0x24 load address 0x0801029c
+.data           0x20000000       0x24 load address 0x08010294
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -8169,16 +8169,16 @@ LOAD C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3
                 0x20000024                        . = ALIGN (0x4)
 
 .tm_clone_table
-                0x20000024        0x0 load address 0x080102c0
+                0x20000024        0x0 load address 0x080102b8
  .tm_clone_table
                 0x20000024        0x0 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  .tm_clone_table
                 0x20000024        0x0 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtend.o
 
-.igot.plt       0x20000024        0x0 load address 0x080102c0
+.igot.plt       0x20000024        0x0 load address 0x080102b8
  .igot.plt      0x20000024        0x0 C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.tdata          0x20000024        0x0 load address 0x080102c0
+.tdata          0x20000024        0x0 load address 0x080102b8
  *(.tdata .tdata.* .gnu.linkonce.td.*)
                 0x20000024                        . = ALIGN (0x4)
                 0x20000024                        _edata = .
@@ -8195,7 +8195,7 @@ LOAD C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3
                 [!provide]                        PROVIDE (__data_source_end = __tdata_source_end)
                 [!provide]                        PROVIDE (__data_source_size = (__data_source_end - __data_source))
 
-.tbss           0x20000024        0x0 load address 0x080102c0
+.tbss           0x20000024        0x0 load address 0x080102b8
                 0x20000024                        _sbss = .
                 0x20000024                        __bss_start__ = _sbss
  *(.tbss .tbss.*)
@@ -8212,7 +8212,7 @@ LOAD C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3
                 [!provide]                        PROVIDE (__arm32_tls_tcb_offset = MAX (0x8, __tls_align))
                 [!provide]                        PROVIDE (__arm64_tls_tcb_offset = MAX (0x10, __tls_align))
 
-.bss            0x20000024     0x62a0 load address 0x080102c0
+.bss            0x20000024     0x62a0 load address 0x080102b8
  *(.bss)
  *(.bss*)
  .bss.completed.1
@@ -8438,7 +8438,7 @@ LOAD C:/Software/EMBEDD~1/ARM_GCC/142BCE~1.3RE/bin/../lib/gcc/arm-none-eabi/14.3
                 [!provide]                        PROVIDE (__bss_size = (__bss_end - __bss_start))
 
 ._user_heap_stack
-                0x200062c4      0x604 load address 0x080102c0
+                0x200062c4      0x604 load address 0x080102b8
                 0x200062c8                        . = ALIGN (0x8)
  *fill*         0x200062c4        0x4 
                 [!provide]                        PROVIDE (end = .)
@@ -8651,7 +8651,7 @@ LOAD linker stubs
  .comment       0x00000046       0x47 CMakeFiles/ESC_G4.dir/OS_App/BusBar_task.c.obj
  .comment       0x00000046       0x47 CMakeFiles/ESC_G4.dir/OS_App/ISR_Proc.c.obj
 
-.debug_info     0x00000000    0x2c91d
+.debug_info     0x00000000    0x2c900
  .debug_info    0x00000000      0x58e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
  .debug_info    0x0000058e     0x2063 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
  .debug_info    0x000025f1     0x1d80 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
@@ -8683,21 +8683,21 @@ LOAD linker stubs
  .debug_info    0x00022bca      0x4f2 CMakeFiles/ESC_G4.dir/Core/Src/dma.c.obj
  .debug_info    0x000230bc      0xb1b CMakeFiles/ESC_G4.dir/Core/Src/fdcan.c.obj
  .debug_info    0x00023bd7      0xaf6 CMakeFiles/ESC_G4.dir/Core/Src/spi.c.obj
- .debug_info    0x000246cd     0x151d CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
- .debug_info    0x00025bea     0x10fa CMakeFiles/ESC_G4.dir/Core/Src/usart.c.obj
- .debug_info    0x00026ce4     0x11be CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
- .debug_info    0x00027ea2      0x4ec CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_hal_msp.c.obj
- .debug_info    0x0002838e       0x30 CMakeFiles/ESC_G4.dir/startup_stm32g431xx.s.obj
- .debug_info    0x000283be      0x570 CMakeFiles/ESC_G4.dir/Library/Src/FOC.c.obj
- .debug_info    0x0002892e      0xf15 CMakeFiles/ESC_G4.dir/Library/Src/FOC_Portable.c.obj
- .debug_info    0x00029843      0x180 CMakeFiles/ESC_G4.dir/Library/Src/OS_Support.c.obj
- .debug_info    0x000299c3      0x1f8 CMakeFiles/ESC_G4.dir/Library/Src/VOFAplus.c.obj
- .debug_info    0x00029bbb      0x26f CMakeFiles/ESC_G4.dir/Library/Src/SMO.c.obj
- .debug_info    0x00029e2a      0x164 CMakeFiles/ESC_G4.dir/OS_App/LIVE_task.c.obj
- .debug_info    0x00029f8e      0x183 CMakeFiles/ESC_G4.dir/OS_App/BTN_Set_task.c.obj
- .debug_info    0x0002a111     0x1198 CMakeFiles/ESC_G4.dir/OS_App/FOC_task.c.obj
- .debug_info    0x0002b2a9      0xd88 CMakeFiles/ESC_G4.dir/OS_App/BusBar_task.c.obj
- .debug_info    0x0002c031      0x8ec CMakeFiles/ESC_G4.dir/OS_App/ISR_Proc.c.obj
+ .debug_info    0x000246cd     0x1500 CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
+ .debug_info    0x00025bcd     0x10fa CMakeFiles/ESC_G4.dir/Core/Src/usart.c.obj
+ .debug_info    0x00026cc7     0x11be CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+ .debug_info    0x00027e85      0x4ec CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+ .debug_info    0x00028371       0x30 CMakeFiles/ESC_G4.dir/startup_stm32g431xx.s.obj
+ .debug_info    0x000283a1      0x570 CMakeFiles/ESC_G4.dir/Library/Src/FOC.c.obj
+ .debug_info    0x00028911      0xf15 CMakeFiles/ESC_G4.dir/Library/Src/FOC_Portable.c.obj
+ .debug_info    0x00029826      0x180 CMakeFiles/ESC_G4.dir/Library/Src/OS_Support.c.obj
+ .debug_info    0x000299a6      0x1f8 CMakeFiles/ESC_G4.dir/Library/Src/VOFAplus.c.obj
+ .debug_info    0x00029b9e      0x26f CMakeFiles/ESC_G4.dir/Library/Src/SMO.c.obj
+ .debug_info    0x00029e0d      0x164 CMakeFiles/ESC_G4.dir/OS_App/LIVE_task.c.obj
+ .debug_info    0x00029f71      0x183 CMakeFiles/ESC_G4.dir/OS_App/BTN_Set_task.c.obj
+ .debug_info    0x0002a0f4     0x1198 CMakeFiles/ESC_G4.dir/OS_App/FOC_task.c.obj
+ .debug_info    0x0002b28c      0xd88 CMakeFiles/ESC_G4.dir/OS_App/BusBar_task.c.obj
+ .debug_info    0x0002c014      0x8ec CMakeFiles/ESC_G4.dir/OS_App/ISR_Proc.c.obj
 
 .debug_abbrev   0x00000000     0x6273
  .debug_abbrev  0x00000000      0x11a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
@@ -9066,7 +9066,7 @@ LOAD linker stubs
  .debug_macro   0x00025216      0x38b CMakeFiles/ESC_G4.dir/OS_App/BusBar_task.c.obj
  .debug_macro   0x000255a1      0x2bd CMakeFiles/ESC_G4.dir/OS_App/ISR_Proc.c.obj
 
-.debug_line     0x00000000    0x27021
+.debug_line     0x00000000    0x27014
  .debug_line    0x00000000      0x67e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
  .debug_line    0x0000067e     0x1e53 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c.obj
  .debug_line    0x000024d1     0x186b cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c.obj
@@ -9092,27 +9092,27 @@ LOAD linker stubs
  .debug_line    0x0001d129      0x6dc cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .debug_line    0x0001d805      0x603 cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir/__/__/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
  .debug_line    0x0001de08      0x95d CMakeFiles/ESC_G4.dir/Core/Src/main.c.obj
- .debug_line    0x0001e765      0x655 CMakeFiles/ESC_G4.dir/Core/Src/gpio.c.obj
- .debug_line    0x0001edba      0x867 CMakeFiles/ESC_G4.dir/Core/Src/app_freertos.c.obj
- .debug_line    0x0001f621      0x849 CMakeFiles/ESC_G4.dir/Core/Src/adc.c.obj
- .debug_line    0x0001fe6a      0x614 CMakeFiles/ESC_G4.dir/Core/Src/dma.c.obj
- .debug_line    0x0002047e      0x6b0 CMakeFiles/ESC_G4.dir/Core/Src/fdcan.c.obj
- .debug_line    0x00020b2e      0x68e CMakeFiles/ESC_G4.dir/Core/Src/spi.c.obj
- .debug_line    0x000211bc      0xb1b CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
- .debug_line    0x00021cd7      0x88e CMakeFiles/ESC_G4.dir/Core/Src/usart.c.obj
- .debug_line    0x00022565      0x8b9 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
- .debug_line    0x00022e1e      0x613 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_hal_msp.c.obj
- .debug_line    0x00023431       0x7b CMakeFiles/ESC_G4.dir/startup_stm32g431xx.s.obj
- .debug_line    0x000234ac      0x5b4 CMakeFiles/ESC_G4.dir/Library/Src/FOC.c.obj
- .debug_line    0x00023a60      0x719 CMakeFiles/ESC_G4.dir/Library/Src/FOC_Portable.c.obj
- .debug_line    0x00024179      0x3d8 CMakeFiles/ESC_G4.dir/Library/Src/OS_Support.c.obj
- .debug_line    0x00024551      0x4f5 CMakeFiles/ESC_G4.dir/Library/Src/VOFAplus.c.obj
- .debug_line    0x00024a46      0x383 CMakeFiles/ESC_G4.dir/Library/Src/SMO.c.obj
- .debug_line    0x00024dc9      0x3f3 CMakeFiles/ESC_G4.dir/OS_App/LIVE_task.c.obj
- .debug_line    0x000251bc      0x3eb CMakeFiles/ESC_G4.dir/OS_App/BTN_Set_task.c.obj
- .debug_line    0x000255a7      0x9d8 CMakeFiles/ESC_G4.dir/OS_App/FOC_task.c.obj
- .debug_line    0x00025f7f      0x88e CMakeFiles/ESC_G4.dir/OS_App/BusBar_task.c.obj
- .debug_line    0x0002680d      0x814 CMakeFiles/ESC_G4.dir/OS_App/ISR_Proc.c.obj
+ .debug_line    0x0001e765      0x662 CMakeFiles/ESC_G4.dir/Core/Src/gpio.c.obj
+ .debug_line    0x0001edc7      0x867 CMakeFiles/ESC_G4.dir/Core/Src/app_freertos.c.obj
+ .debug_line    0x0001f62e      0x849 CMakeFiles/ESC_G4.dir/Core/Src/adc.c.obj
+ .debug_line    0x0001fe77      0x614 CMakeFiles/ESC_G4.dir/Core/Src/dma.c.obj
+ .debug_line    0x0002048b      0x6b0 CMakeFiles/ESC_G4.dir/Core/Src/fdcan.c.obj
+ .debug_line    0x00020b3b      0x68e CMakeFiles/ESC_G4.dir/Core/Src/spi.c.obj
+ .debug_line    0x000211c9      0xb01 CMakeFiles/ESC_G4.dir/Core/Src/tim.c.obj
+ .debug_line    0x00021cca      0x88e CMakeFiles/ESC_G4.dir/Core/Src/usart.c.obj
+ .debug_line    0x00022558      0x8b9 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_it.c.obj
+ .debug_line    0x00022e11      0x613 CMakeFiles/ESC_G4.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+ .debug_line    0x00023424       0x7b CMakeFiles/ESC_G4.dir/startup_stm32g431xx.s.obj
+ .debug_line    0x0002349f      0x5b4 CMakeFiles/ESC_G4.dir/Library/Src/FOC.c.obj
+ .debug_line    0x00023a53      0x719 CMakeFiles/ESC_G4.dir/Library/Src/FOC_Portable.c.obj
+ .debug_line    0x0002416c      0x3d8 CMakeFiles/ESC_G4.dir/Library/Src/OS_Support.c.obj
+ .debug_line    0x00024544      0x4f5 CMakeFiles/ESC_G4.dir/Library/Src/VOFAplus.c.obj
+ .debug_line    0x00024a39      0x383 CMakeFiles/ESC_G4.dir/Library/Src/SMO.c.obj
+ .debug_line    0x00024dbc      0x3f3 CMakeFiles/ESC_G4.dir/OS_App/LIVE_task.c.obj
+ .debug_line    0x000251af      0x3eb CMakeFiles/ESC_G4.dir/OS_App/BTN_Set_task.c.obj
+ .debug_line    0x0002559a      0x9d8 CMakeFiles/ESC_G4.dir/OS_App/FOC_task.c.obj
+ .debug_line    0x00025f72      0x88e CMakeFiles/ESC_G4.dir/OS_App/BusBar_task.c.obj
+ .debug_line    0x00026800      0x814 CMakeFiles/ESC_G4.dir/OS_App/ISR_Proc.c.obj
 
 .debug_str      0x00000000    0xee2cb
  .debug_str     0x00000000    0xee2cb cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
